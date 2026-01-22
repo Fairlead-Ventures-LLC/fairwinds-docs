@@ -45,5 +45,5 @@ New to FairWinds? Here's how to get started:
 ## Need Help?
 
 - Browse the documentation using the sidebar navigation
-- Check out our [GitHub repositories](https://github.com/Fairlead-Ventures-LLC)
-- Report issues or request features on [GitHub Issues](https://github.com/Fairlead-Ventures-LLC/fairwinds-docs/issues)
+- Visit the [FairWinds App](https://fairwinds.app) to get started
+- Contact support through the app for assistance
