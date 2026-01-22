@@ -1,35 +1,49 @@
 ---
 layout: base.html
-title: Home
+title: Overview
 ---
 
-# Welcome to FairWinds Documentation
+# FairWinds Documentation
 
-FairWinds is a virtual sailing game that brings the excitement of yacht racing to your browser. This documentation will help you understand how to use the platform, integrate with our APIs, and get the most out of your sailing experience.
+<p class="lead">FairWinds is a virtual sailing platform that brings the excitement of yacht racing to your browser with real-time weather data, advanced routing, and competitive multiplayer racing.</p>
 
-## Quick Links
-
-- [Getting Started](/getting-started/) - New to FairWinds? Start here!
-- [API Reference](/api/) - Integrate with FairWinds services
-- [GitHub Repository](https://github.com/Fairlead-Ventures-LLC/fairwinds-docs) - Contribute to these docs
+---
 
 ## What is FairWinds?
 
-FairWinds is a comprehensive virtual sailing platform that includes:
+FairWinds combines accurate weather forecasting, sophisticated routing algorithms, and real-time multiplayer racing to create an immersive virtual sailing experience. Whether you're a seasoned sailor or new to the sport, FairWinds provides the tools you need to compete at the highest level.
 
-- **Real-time Weather Data** - Accurate wind, current, and wave forecasts
-- **Advanced Routing** - Optimal route calculation for your races
-- **Live Racing** - Compete against other sailors in real-time
-- **Mobile Support** - Race from anywhere with our mobile apps
+### Key Features
 
-## Getting Help
+- **Real-time Weather Data** - Access accurate wind, current, and wave forecasts from multiple data sources
+- **Advanced Routing Engine** - Calculate optimal routes using sophisticated polar performance models
+- **Live Multiplayer Racing** - Compete against sailors worldwide in real-time events
+- **Mobile & Desktop** - Race from anywhere with our responsive web app and native mobile apps
 
-If you need assistance:
+---
 
-- Check the documentation sections in the navigation
-- Visit our [GitHub Issues](https://github.com/Fairlead-Ventures-LLC/fairwinds-docs/issues)
-- Join our community discussions
+## Getting Started
 
-## Contributing
+New to FairWinds? Here's how to get started:
 
-These docs are open source! If you find an error or want to improve the documentation, please submit a pull request to our [GitHub repository](https://github.com/Fairlead-Ventures-LLC/fairwinds-docs).
+1. **[Create an Account](/quickstart/)** - Sign up and verify your email
+2. **[Join a Race](/concepts/races/)** - Browse available races and join your first event
+3. **[Plan Your Route](/concepts/routing/)** - Use our routing tools to optimize your course
+4. **[Start Racing](/concepts/races/)** - Watch your boat follow your planned route in real-time
+
+---
+
+## Popular Topics
+
+- [Understanding Weather Data](/concepts/weather/) - Learn how to read and interpret forecasts
+- [Routing Strategies](/concepts/routing/) - Master the art of route planning
+- [Boat Performance](/concepts/polars/) - Understand polar diagrams and boat speed
+- [Race Formats](/concepts/races/) - Learn about different types of races
+
+---
+
+## Need Help?
+
+- Browse the documentation using the sidebar navigation
+- Check out our [GitHub repositories](https://github.com/Fairlead-Ventures-LLC)
+- Report issues or request features on [GitHub Issues](https://github.com/Fairlead-Ventures-LLC/fairwinds-docs/issues)

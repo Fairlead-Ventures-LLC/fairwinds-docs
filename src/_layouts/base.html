@@ -3,32 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} - FairWinds Documentation</title>
+  <title>{{ title }} - FairWinds Docs</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="container">
-        <h1><a href="/">FairWinds Documentation</a></h1>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/getting-started/">Getting Started</a></li>
-          <li><a href="/api/">API Reference</a></li>
-          <li><a href="https://github.com/Fairlead-Ventures-LLC/fairwinds-docs" target="_blank">GitHub</a></li>
-        </ul>
+  <div class="docs-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1><a href="/">FairWinds</a></h1>
       </div>
-    </nav>
-  </header>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-title">Getting Started</div>
+          <ul>
+            <li><a href="/">Overview</a></li>
+            <li><a href="/quickstart/">Quickstart</a></li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <div class="nav-section-title">Concepts</div>
+          <ul>
+            <li><a href="/concepts/races/">Races</a></li>
+            <li><a href="/concepts/weather/">Weather Data</a></li>
+            <li><a href="/concepts/routing/">Routing</a></li>
+            <li><a href="/concepts/polars/">Boat Polars</a></li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <div class="nav-section-title">Resources</div>
+          <ul>
+            <li><a href="https://fairwinds.app" target="_blank">FairWinds App</a></li>
+            <li><a href="https://github.com/Fairlead-Ventures-LLC" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      {{ content }}
+      
+      <footer>
+        <p>© 2026 FairWinds Virtual Sailing. Licensed under <a href="https://github.com/Fairlead-Ventures-LLC/fairwinds-docs/blob/main/LICENSE" target="_blank">Apache 2.0</a>.</p>
+      </footer>
+    </main>
+  </div>
   
-  <main class="container">
-    {{ content }}
-  </main>
-  
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 FairWinds Virtual Sailing. Licensed under Apache 2.0.</p>
-    </div>
-  </footer>
+  <!-- Mobile menu toggle -->
+  <button class="mobile-menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
 </body>
 </html>
