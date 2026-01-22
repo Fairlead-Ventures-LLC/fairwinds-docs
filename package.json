@@ -1,0 +1,25 @@
+{
+  "name": "fairwinds-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fairlead-Ventures-LLC/fairwinds-docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fairlead-Ventures-LLC/fairwinds-docs/issues"
+  },
+  "homepage": "https://github.com/Fairlead-Ventures-LLC/fairwinds-docs#readme",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
