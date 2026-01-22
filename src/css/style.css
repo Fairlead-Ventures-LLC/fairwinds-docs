@@ -59,6 +59,31 @@ body {
   text-decoration: none;
 }
 
+.language-switcher {
+  margin-top: 0.75rem;
+}
+
+.language-switcher select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.language-switcher select:hover {
+  border-color: var(--primary-color);
+}
+
+.language-switcher select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
 .sidebar-nav {
   padding: 0 1rem;
 }

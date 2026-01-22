@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} - FairWinds Docs</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="docs-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1><a href="/it/">FairWinds</a></h1>
+        <div class="language-switcher">
+          <select onchange="window.location.href=this.value">
+            <option value="/en/">🇬🇧 English</option>
+            <option value="/fr/">🇫🇷 Français</option>
+            <option value="/it/" selected>🇮🇹 Italiano</option>
+          </select>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-title">Iniziare</div>
+          <ul>
+            <li><a href="/it/">Panoramica</a></li>
+            <li><a href="/it/quickstart/">Avvio Rapido</a></li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <div class="nav-section-title">Concetti</div>
+          <ul>
+            <li><a href="/it/concepts/races/">Gare</a></li>
+            <li><a href="/it/concepts/weather/">Dati Meteo</a></li>
+            <li><a href="/it/concepts/routing/">Routing</a></li>
+            <li><a href="/it/concepts/polars/">Polari</a></li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <div class="nav-section-title">Risorse</div>
+          <ul>
+            <li><a href="https://fairwinds.app" target="_blank">App FairWinds</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      {{ content }}
+      
+      <footer>
+        <p>© 2026 FairWinds Virtual Sailing.</p>
+      </footer>
+    </main>
+  </div>
+  
+  <!-- Mobile menu toggle -->
+  <button class="mobile-menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+</body>
+</html>
