@@ -1,79 +1,69 @@
 ---
-layout: base.html
-title: Quickstart
+layout: base-en.html
+title: Getting Started
 ---
 
-# Quickstart
+# Getting Started in FairWinds
 
-<p class="lead">Get up and running with FairWinds in under 5 minutes.</p>
-
----
-
-## Create Your Account
-
-1. Visit [fairwinds.app](https://fairwinds.app)
-2. Click **Sign Up** in the top navigation
-3. Enter your email address and create a secure password
-4. Check your email and click the verification link
+<p class="lead">5 tips to get sailing in 5 minutes.</p>
 
 ---
 
-## Join Your First Race
+## 1. Join a Practice Race
 
-Once your account is verified:
+The practice races are short, easy courses designed to familiarize you with the boat controls. 
 
-### 1. Browse Available Races
-
-Navigate to the **Races** page to see upcoming events. Races are organized by:
-
-- **Open Races** - Anyone can join
-- **Private Races** - Invitation only
-- **Series** - Multi-race competitions
-
-### 2. Select a Race
-
-Click on any race to view details:
-
-- Start time and duration
-- Course waypoints
-- Weather forecast
-- Current participants
-
-### 3. Join the Race
-
-Click the **Join Race** button. You'll be added to the participant list and can start planning your route.
+From the dashboard:
+- Click on a highlighted **practice race**
+- Or click **'View all'** to see other options
+- Click **'Register'** to sign up
+- Click **'Sail'** to join the race!
 
 ---
 
-## Plan Your Route
+## 2. Watch the Tutorial
 
-### Manual Route Planning
+Once in the race viewer:
+1. Click on the **Nav menu** (the book icon)
+2. Choose **"Show Tutorial"**
+3. Watch the quick flyover and explanation of the controls
 
-1. Click on the map to add waypoints
-2. Drag waypoints to adjust your course
-3. View estimated arrival times for each leg
-
-### Automatic Routing
-
-1. Click the **Auto Route** button
-2. The routing engine will calculate the optimal path
-3. Review and adjust as needed
+You can run the tutorial as many times as you want!
 
 ---
 
-## Race Day
+## 3. Use the Compass
 
-When the race starts:
+Turn your boat using:
+- The **← and →** arrow keys
+- Or **click and drag** the blue diamond on the compass
 
-1. Your boat will automatically follow your planned route
-2. Monitor your position relative to other boats
-3. Adjust your route during the race if conditions change
-4. Watch the leaderboard update in real-time
+**Don't worry** - your course will not change until you confirm it with the **'Set'** button!
+
+---
+
+## 4. Customize Your View
+
+You have a lot of control over the look of the charts and controls:
+
+- **Wind visualization** - Use the controls at the bottom of the screen to toggle wind display on/off
+- **Colors and arrows** - Customize how weather data is displayed
+- **Chart layers** - Show or hide different data overlays
+
+---
+
+## 5. Ask Questions!
+
+FairWinds has an active community and we are more than happy to help you get started.
+
+- Join discussions in the game
+- Connect with other sailors
+- Share tips and strategies
 
 ---
 
 ## Next Steps
 
-- Learn about [weather data and forecasts](/concepts/weather/)
-- Understand [routing strategies](/concepts/routing/)
-- Master [boat performance and polars](/concepts/polars/)
+- Learn about [weather data and forecasts](/en/concepts/weather/)
+- Understand [routing strategies](/en/concepts/routing/)
+- Master [boat performance and polars](/en/concepts/polars/)
