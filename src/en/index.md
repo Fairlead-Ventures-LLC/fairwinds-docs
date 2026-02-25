@@ -12,6 +12,16 @@ For an absolute minimum 10-minute crash course (with no actual crashing) - watch
 
 ---
 
+##  Set Your Language
+
+FairWinds supports English, French, and Italian. Go to your **Profile page** and set your language preference before you do anything else — it affects the in-game UI, not just the docs.
+
+![profile-language](/images/profile-language.png)
+
+
+
+---
+
 ## 1. Do a Practice Race
 
 From the dashboard click **Practice → Show all**. The Waikiki practice is 1nm and takes about 10 minutes — perfect for getting your bearings.

@@ -19,7 +19,13 @@ The compass controls your boat's heading. You have two ways to change course:
 
 **Important:** your boat won't actually change course until you hit the **'Set' button**. This means you can freely experiment with a new heading and see where it takes you before committing.
 
-<!-- TODO: add compass screenshot -->
+![changecoursedrag](/images/changecoursedrag.png)
+
+Or click on the arrows. Your course is not changed until you press 'Set'
+
+![changecourse](/images/changecourse.png)
+
+
 
 ---
 
@@ -27,21 +33,26 @@ The compass controls your boat's heading. You have two ways to change course:
 
 The reckoning line is the projected path of your boat — where you will actually go based on your current heading and the wind.
 
+You can toggle the visiblity of the line on & off here
+
+![toggle](/images/toggle.png)
+
+
+
+
+The line is very precise. It uses the wind speed, wind direction, and boat polar angle to calculate the boat's position on a rolling per minute basis, and updates each simulator cycle.
+
+![reckoningline](/images/reckoningline.png)
+
+
 A few things worth knowing early on:
 
-- **Crash detection follows the reckoning line**, not your route line. If your reckoning line is clear, you are safe.
-- The reckoning line and your route line are not always the same thing. A route line just draws a line between waypoints — the reckoning line shows the real path your boat will sail to get there (using great circle calculations).
-- If you don't have a route active, the reckoning line shows where your current fixed heading takes you.
+- **Crash detection follows the reckoning line**, not your route line. If your reckoning line is clear, you are safe. Crash detection is 'ON' when you click on the skull
 
-<!-- TODO: add reckoning line screenshot -->
+![crashdetection](/images/crashdetection.png)
 
----
+- **The yellow circle** - this the time that the forecast will update. This is important if you are planning your course and you want to know when the wind speed or angle may change your projected heading. In this image, the forecast will update at 00z (0000 UTC). Change itto show local time by simply clicking on the clock.
 
-## Route Line vs Reckoning Line
+  ![Screenshot 2026-02-25 at 3.18.03 PM](/images/forecastcircle.png)
 
-This trips up a lot of new sailors. The short version:
 
-- **Route line** — the line drawn between your waypoints. Visual only.
-- **Reckoning line** — the actual projected path of your boat. This is what matters.
-
-When a route is active, your reckoning line will follow it. But if your route line is set to 'rhumb' and the distances are long, the reckoning line may curve away from it. See [Rhumb vs Great Circle](/en/guides/rhumb-vs-great-circle/) for more on that.
