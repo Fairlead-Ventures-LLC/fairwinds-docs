@@ -1,5 +1,6 @@
 ---
 layout: base-en.html
+typora-root-url: ../..
 title: Currents Part 1 - A Primer
 ---
 

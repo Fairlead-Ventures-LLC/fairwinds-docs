@@ -1,5 +1,6 @@
 ---
 layout: base-en.html
+typora-root-url: ../..
 title: Rhumb vs Great Circle
 ---
 
@@ -9,11 +10,15 @@ title: Rhumb vs Great Circle
 
 Here's a short primer on GC vs rhumb lines.
 
+
+
 ---
 
 ## The Divider Tool
 
 The **Divider tool** (yellow triangles) in the tools menu supports both GC and rhumb-line measurements and is an excellent way to experiment with the two modes.
+
+![dividers](/images/dividers.png)
 
 ---
 
@@ -29,7 +34,7 @@ On rhumb lines, a bearing of 80° leaving NY to the UK will still be 80° when y
 
 Traditionally, in the days before GPS, sailors used rhumb line navigation because it was much simpler to follow, sacrificing some distance for ease of navigation. 
 
-I still hear people say things like *"turn left at the point and then it's 230° for 2000 miles."* Well, not anymore, unless you want to sail a longer distance.
+People say things like *"turn left at the point and then it's 230° for 2000 miles."* Well, not anymore, unless you want to sail a longer distance.
 
 ---
 
@@ -42,6 +47,10 @@ If you are looking at a mercator map, the GC line will appear curved and visuall
 A key difference in GC routes is that as you follow this line your **bearing to the final destination will change**.
 
 **Example:** NY to London distance is now **2974nm** following GC, and notice how the bearing changes as you navigate the route.
+
+
+
+<!-- TODO: add rhumb2 screenshot -->
 
 ---
 
@@ -73,6 +82,8 @@ But actually it's navigating to the destination using the GC route. FW will auto
 
 Now, if we change the route line to draw using the 'great circle' - **voila!** - this is the path the boat will actually follow.
 
+<!-- TODO: add rhumb1 screenshot -->
+
 ### High Latitudes
 
 **"I crashed in the Arctic, why!?"**
@@ -86,6 +97,10 @@ You have to be careful! You have two options:
 2. Make shorter segments
 
 The nice thing is crash detection will catch most of these situations for you, but it's all too easy to rely on the route lines without ensuring they are showing the correct path.
+
+![arcticnuna](/images/arcticnuna.png)
+
+
 
 ---
 

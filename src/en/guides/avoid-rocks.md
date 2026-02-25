@@ -1,5 +1,6 @@
 ---
 layout: base-en.html
+typora-root-url: ../..
 title: How to Avoid the Rocks
 ---
 
@@ -9,15 +10,18 @@ title: How to Avoid the Rocks
 
 Here are a few ways to help you avoid the rocks.
 
+![avoidingcrashes](/images/avoidingcrashes.png)
+
+
 ---
 
 ## Coastlines ON
 
 In the tools bar, you can toggle coastlines on/off. When **ON**, this will show a **red border** around the coasts. 
 
-These coasts are the official borders of FairWinds, and may not always line up to the map (FW is more accurate than most maps). 
+These <u>red lines are the official borders</u> of FairWinds, and may not always line up to the map (FW is more accurate than most maps). 
 
-**Pro tip:** It's a good idea to keep them on and zoom along your course when navigating tight quarters. You will be surprised at how close you can cut it!
+**Pro tip:** It's a good idea to keep coasts 'on' and look along your course when navigating tight quarters. You will be surprised at how close you can cut it!
 
 ---
 

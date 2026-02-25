@@ -1,9 +1,10 @@
 ---
 layout: base-en.html
-title: Routing Part 1 - A Primer
+typora-root-url: ../..
+title: Routing - How It Works
 ---
 
-# Routing - Part 1: A Primer
+# Routing - How It Works
 
 <p class="lead">One incredible aspect of virtual sailing is the sheer number of possible moves to make in any given minute, let alone over the course of a race. The pure decision space of virtual sailing easily dwarfs chess: even before you add shifting winds (and new forecasts every ~6 hours), the number of possible steering sequences is astronomical.</p>
 

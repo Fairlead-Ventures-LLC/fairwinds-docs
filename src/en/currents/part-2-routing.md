@@ -1,5 +1,6 @@
 ---
 layout: base-en.html
+typora-root-url: ../..
 title: Currents Part 2 - How to Route with Currents
 ---
 

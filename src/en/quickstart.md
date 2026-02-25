@@ -1,69 +1,41 @@
 ---
 layout: base-en.html
-title: Getting Started
+typora-root-url: ..
+title: Overview
 ---
 
-# Getting Started in FairWinds
+# FairWinds Overview
 
-<p class="lead">5 tips to get sailing in 5 minutes.</p>
-
----
-
-## 1. Join a Practice Race
-
-The practice races are short, easy courses designed to familiarize you with the boat controls. 
-
-From the dashboard:
-- Click on a highlighted **practice race**
-- Or click **'View all'** to see other options
-- Click **'Register'** to sign up
-- Click **'Sail'** to join the race!
+<p class="lead">FairWinds is a virtual sailing platform that combines navigation strategy and sailing physics with real-time weather, competitive multiplayer racing, and world exploration.</p>
 
 ---
 
-## 2. Watch the Tutorial
+## Absolute Basics
 
-Once in the race viewer:
-1. Click on the **Nav menu** (the book icon)
-2. Choose **"Show Tutorial"**
-3. Watch the quick flyover and explanation of the controls
-
-You can run the tutorial as many times as you want!
-
----
-
-## 3. Use the Compass
-
-Turn your boat using:
-- The **← and →** arrow keys
-- Or **click and drag** the blue diamond on the compass
-
-**Don't worry** - your course will not change until you confirm it with the **'Set'** button!
+- FairWinds is a **persistent sailing simulator**. The servers will continuously simulate your boat whether you are online or offline. You don't need to have the race viewer open. Many people have virtually sailed around the world and across every ocean over many months.
+- **Browser-based** - no apps or downloads. Works in all modern browsers on all platforms. There is no 'app' yet, but the web view on mobile is 'mobile designed' and is excellent on most phones.
+- **Multi-lingual** - FW supports English, French, and Italian languages. More available upon request. Be sure to select your language preference in the profile page.
+- **Real-time Weather Data** - <u>NOAA GFS 0.25</u>° wind forecast updates in FW every 6 hours: 00z, 06z, 12z, 18z. Forecasts aren't released until ~4 hours after forecast time (e.g. 00z data is available at 0400z). Some regions also contain currents at different regional resolution. Wind and current data and forecast status: https://fairwinds.world/wind
+- **NMEA Data** - For NMEA enabled races, a NMEA port is assigned to each race and each boat. Every race has a 'detail' page where the NMEA port is listed. For Pro users NMEA is available on all races. For basic accounts it is available on all practice races and for 1 credit in official content.
+- **Membership** - Monthly and Annual subscriptions (aka "Pro") get you access to everything in the platform. No upsells. You can also buy individual 'race credits' to fully unlock Pro races and NMEA without a subscription. See https://fairwinds.world/profile/subscription
+- **Racing and Exploration** - Community events are a great way to get started racing. FairWinds also has a number of 'expeditions' — done at your own pace and usually following a theme (e.g. 'follow in the path of Joshua Slocum').
 
 ---
 
-## 4. Customize Your View
+## What's in the Docs
 
-You have a lot of control over the look of the charts and controls:
-
-- **Wind visualization** - Use the controls at the bottom of the screen to toggle wind display on/off
-- **Colors and arrows** - Customize how weather data is displayed
-- **Chart layers** - Show or hide different data overlays
-
----
-
-## 5. Ask Questions!
-
-FairWinds has an active community and we are more than happy to help you get started.
-
-- Join discussions in the game
-- Connect with other sailors
-- Share tips and strategies
+- [Getting Started](/en/) — quickstart guide
+- [Avoid the Rocks](/en/guides/avoid-rocks/) — crash detection and safe navigation
+- [Rhumb vs Great Circle](/en/guides/rhumb-vs-great-circle/) — understanding routing geometry
+- [Routing - How It Works](/en/routing/how-it-works/) — how routing works in FairWinds
+- [Currents](/en/currents/part-1-primer/) — sailing with ocean currents
 
 ---
 
-## Next Steps
+## Advanced Topics
 
-- Learn about [weather data and forecasts](/en/concepts/weather/)
-- Understand [routing strategies](/en/concepts/routing/)
-- Master [boat performance and polars](/en/concepts/polars/)
+*(Coming soon)*
+
+- Routing with currents
+- How routers work and the FW internal router
+- Getting Good & Winning
