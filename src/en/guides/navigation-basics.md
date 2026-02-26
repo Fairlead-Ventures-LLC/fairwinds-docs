@@ -51,8 +51,7 @@ A few things worth knowing early on:
 
 ![crashdetection](/images/crashdetection.png)
 
-- **The yellow circle** - this the time that the forecast will update. This is important if you are planning your course and you want to know when the wind speed or angle may change your projected heading. In this image, the forecast will update at 00z (0000 UTC). Change itto show local time by simply clicking on the clock.
+- **The yellow circle** - this the time that the forecast will update. This is important if you are planning your course and you want to know when the wind speed or angle may change your projected heading. In this image, the forecast will update at 00z (0000 UTC). Change it to show local time by simply clicking on the clock.
 
   ![Screenshot 2026-02-25 at 3.18.03 PM](/images/forecastcircle.png)
-
 

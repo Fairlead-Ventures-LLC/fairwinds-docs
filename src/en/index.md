@@ -8,7 +8,7 @@ title: Getting Started
 
 <p class="lead">New to FairWinds? Here's the fastest way to get sailing.</p>
 
-For an absolute minimum 10-minute crash course (with no actual crashing) - watch the FairWinds Quick Start tutorial: https://youtu.be/1WSZaWi8wng
+For an absolute minimum 10-minute crash course (with no actual crashing) - watch the FairWinds Quick Start tutorial: TBA
 
 ---
 
@@ -24,7 +24,7 @@ FairWinds supports English, French, and Italian. Go to your **Profile page** and
 
 ## 1. Do a Practice Race
 
-From the dashboard click **Practice → Show all**. The Waikiki practice is 1nm and takes about 10 minutes — perfect for getting your bearings.
+From the dashboard click **"Register"** on one of the showcased practices. Or click **Practice → Show all**. The Waikiki practice is 1nm and takes about 10 minutes — perfect for getting your bearings.
 
 ![new-practice](/images/new-practice.png)
 
