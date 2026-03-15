@@ -1,10 +1,10 @@
 ---
 layout: base-en.html
 typora-root-url: ../..
-title: Currents Part 1 - A Primer
+title: Currents Part 2 - The Mechanics
 ---
 
-# Currents - Part 1: A Primer
+# Currents — Part 2: The Mechanics
 
 <p class="lead">FairWinds now integrates currents + wind in several 'fun' current regions of the world - the English Channel + Ireland, the Gulf Stream along the entire western Atlantic, the infamous Agulhas around Africa to Madagascar, the Kuroshio from Hong Kong to Japan, and the entire Eastern Australian current.</p>
 
@@ -90,8 +90,8 @@ FairWinds includes currents in these major regions:
 
 ## Next in This Series
 
-- **Part 2:** How to Route with Currents in FairWinds
-- **Part 3:** Advanced Current Strategies
+- *← [Part 1: Overview](/en/currents/part-1-overview/)*
+- **[Part 3: How to Route with Currents →](/en/currents/part-3-routing/)**
 
 ---
 
