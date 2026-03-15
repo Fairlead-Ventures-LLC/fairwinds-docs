@@ -39,11 +39,11 @@ Notice as this boat gets into the current it is going to have to turn more and m
 
 
 
-![Screenshot 2026-03-14 at 11.46.19 PM](/images/Screenshot 2026-03-14 at 11.46.19 PM-3557459.png)
+![Screenshot 2026-03-14 at 11.46.19 PM](/images/currents-spinout-1.png)
 
 The stronger the current, the more the boat tries to turn into the wind to try to make the next waypoint heading but it cannot go higher than VMG and it spins into the wind. As soon as the boat speeds drops to zero the current overwhelms and pushes the boat further downstream. The boat will never recover as it tries now to turn even more towards the mark. It is because the route is impossible to achieve. 
 
-![Screenshot 2026-03-15 at 12.28.00 AM](/images/Screenshot 2026-03-15 at 12.28.00 AM.png)
+![Screenshot 2026-03-15 at 12.28.00 AM](/images/currents-spinout-3.png)
 
 
 
@@ -51,13 +51,13 @@ The stronger the current, the more the boat tries to turn into the wind to try t
 
 1. Run your route but program scheduled waypoints with fixed TWA/VMG. This way your boat will not force a heading, it will follow the wind direction.
 
-![Screenshot 2026-03-15 at 12.34.45 AM](/images/Screenshot 2026-03-15 at 12.34.45 AM.png)
+![Screenshot 2026-03-15 at 12.34.45 AM](/images/currents-scheduler-fix.png)
 
 
 
 2. CAUTION: anytime you are in light winds with the current and the wind in the same direction, BEWARE. If your route is not set perfectly, it is a recipe for the boat not being able to make the next mark . This situation in La Manche caused many boats to spin out because they did not update their route through a forecast cycle. The new wind made their heading 30° TWA and the boats could not compensate to make it. 
 
-![Screenshot 2026-03-14 at 6.46.46 PM](/images/Screenshot 2026-03-14 at 6.46.46 PM.png)
+![Screenshot 2026-03-14 at 6.46.46 PM](/images/currents-lamanche.png)
 
 
 
