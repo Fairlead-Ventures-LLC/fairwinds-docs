@@ -51,17 +51,13 @@ Try it out in the new practice race: [Hawaiian Punch](https://fairwinds.world/ra
 
 I've done a lot of work on the router 'endgame' to make routing hit marks, gates, and router pins perfectly. It works well — keep an eye out on final approaches. Translations for the new UI elements coming once all features are live.
 
-![Screenshot_2026-03-04_at_6.59.22_PM](/Users/alex/sailgame/fairwinds-docs/src/images/Screenshot_2026-03-04_at_6.59.22_PM.png)
+![Marks overview](/images/Screenshot_2026-03-04_at_6.59.22_PM.png)
 
-![Screenshot_2026-03-04_at_7.55.13_PM](/Users/alex/sailgame/fairwinds-docs/src/images/Screenshot_2026-03-04_at_7.55.13_PM.png)
+![Marks distance lines](/images/Screenshot_2026-03-04_at_7.55.13_PM.png)
 
+![Mark-based routing](/images/Screenshot_2026-03-04_at_7.52.48_PM.png)
 
-
-![Screenshot_2026-03-04_at_7.52.48_PM](/Users/alex/sailgame/fairwinds-docs/src/images/Screenshot_2026-03-04_at_7.52.48_PM-3774511.png)
-
-
-
-![Screenshot_2026-03-04_at_7.52.48_PM](/Users/alex/Desktop/marks/Screenshot_2026-03-04_at_7.54.06_PM.png)
+![Multi-segment routing](/images/Screenshot_2026-03-04_at_7.54.06_PM.png)
 
 ---
 
