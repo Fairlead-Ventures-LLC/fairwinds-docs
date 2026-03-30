@@ -29,11 +29,11 @@ The effect depends on two things: **how big the waves are** and **whether you're
 | Significant wave height | Upwind (TWA ≤ 90°) | Downwind (TWA > 90°) |
 |------------------------|-------------------|---------------------|
 | Below 3 m              | No effect         | No effect           |
-| 3 – 4 m                | −6%               | +3%                 |
-| 4 – 5 m                | −8%               | +4%                 |
-| 5 m and above          | −10%              | +5%                 |
+| 3 – 4 m                | −6%               | +6%                 |
+| 4 – 5 m                | −8%               | +8%                 |
+| 5 m and above          | −10%              | +10%                |
 
-Going upwind in heavy seas is a grind — you're punching into the swell. Going downwind, you get to surf, picking up a small but real speed bonus.
+Going upwind in heavy seas is a grind — you're punching into the swell. Going downwind, you get to surf, gaining the same magnitude of boost as the upwind penalty. A 5 m+ swell is worth ±10% — enough to make routing through or around a swell band a meaningful strategic decision.
 
 ---
 
@@ -56,6 +56,7 @@ The highlighted row in the reference table shows which wave band you're currentl
 - The effect is applied sail-only. Motoring through big seas is unaffected.
 - Route mode and scheduled waypoints both respect the wave multiplier when calculating segment speeds.
 - If wave data is unavailable for your position or time window, the multiplier defaults to 1.0 (no effect).
+- Waves are already built into the FairWinds router if enabled
 
 ---
 
@@ -70,21 +71,19 @@ The file encodes the speed multipliers by TWA and wave height (in metres):
 | TWA | 0–2 m | 3 m | 4 m | 5 m+ |
 |-----|-------|-----|-----|------|
 | 0–90° (upwind) | No effect | −6% | −8% | −10% |
-| 100–180° (downwind) | No effect | +3% | +4% | +5% |
+| 100–180° (downwind) | No effect | +6% | +8% | +10% |
 
-### Installation
+In order for waves to be consdiered in your route
 
-> **Note:** There is a bug in QTVLM — it won't import the file directly through the UI. You have to place it manually in the QTVLM polars directory and restart.
+1. The waves polar must be installed and
 
-1. Move `fw.polwave.csv` into the QTVLM polars folder:
-   `/Applications/qtvlm/polar/`
+2. A wave grib file must be loaded. The active wave gribs provided on the https://fairwinds.world/wind page.
 
-2. Restart QTVLM.
+   ![waves1](/images/waves1.png)
 
-3. Open: **Bateau → Paramètres**
+   ![waves2](/images/waves2.png)
 
-4. Go to: **Paramètres vagues, rafales et densité de glace**
+### QTVLM Installation
 
-5. Select **fw.polwave.csv** from the dropdown.
+> **Note:** There is a bug in QTVLM — it won't import the file directly through the UI in the 'Import' button. You have to place it manually in the Applications/QTVLM/polars directory and restart QTVLM for the option to appear.
 
-*Add screenshots here.*
