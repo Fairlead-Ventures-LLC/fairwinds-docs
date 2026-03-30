@@ -1,5 +1,5 @@
 ---
-layout: base-en.html
+alayout: base-en.html
 typora-root-url: ../..
 title: Waves and Boat Speed
 ---
@@ -8,11 +8,29 @@ title: Waves and Boat Speed
 
 <p class="lead">FairWinds models real ocean wave conditions using live GFS wave forecasts. When significant wave height exceeds 3 metres, your boat speed is affected — upwind is harder, downwind you can surf.</p>
 
+The world's waves are really interesting. The distribution of significant wave height (SWH) globally at any given time is
+<3 meters - 75% ocean surface
+3-4 meters - 15%
+4-5 meters - 5%
+5+ meteres - 5%
+
+**Correlation**
+
+So in our simulation, we are catch the top 25% of all wave fields. You may say "but this just correlates to high wind!" Actuallly, no! For example 30% of the waves 3m+ are in winds less than 5 knots!  And the correlation between wind speed and and wave height in the 3m+ band is r = 0.02. Almost nothing. 
+
+Wave routing is genuinely an independent strategic dimension and not just a wind field. Additinoally wave fields are highly variable forecaast to forecast. ~50% of predicted wave heights in 3-5+m change bands from day to day!
+
+You can really see this all illustrated  the southern ocean with the waves overlaid on the wind colors
+
+![southernocean](/images/southernocean.png)
+
 ---
 
 ## How Wave Data Works
 
 Wave heights come from the **GFS Wave model** (0.5° resolution), the same global forecast system used by professional routing tools. FairWinds fetches the significant wave height field (Hₛ) and interpolates it to your exact position and time using bilinear spatial interpolation and linear time interpolation between forecast steps.
+
+The current wave data is always available on https://fairwinds.world/wind
 
 The wave forecast updates daily at 06 UTC. Below 3 m significant wave height, there is no speed effect — typical open ocean racing conditions. The effect only kicks in when seas are genuinely rough.
 
@@ -33,20 +51,19 @@ The effect depends on two things: **how big the waves are** and **whether you're
 | 4 – 5 m                | −8%               | +8%                 |
 | 5 m and above          | −10%              | +10%                |
 
-Going upwind in heavy seas is a grind — you're punching into the swell. Going downwind, you get to surf, gaining the same magnitude of boost as the upwind penalty. A 5 m+ swell is worth ±10% — enough to make routing through or around a swell band a meaningful strategic decision.
+Going upwind in heavy seas is a grind — you're punching into the swell. Going downwind, you get to surf, gaining the same magnitude of boost as the upwind penalty. A 5 m+ swell is worth ±10% — enough to make routing through or around a swell band a meaningful strategic decision. Do you stay in the surf in lighter wind or head to a flatter area with better wind?
 
 ---
 
-## Reading the Wave Panel
+## Reading the Waves
 
-The wave panel in the race viewer shows:
+The 'Waves' button in the Wind controls panel will toggle the wave field on/off. It shows the waves in 3m, 4m, and 5m bands corresponding to the performance impact area. The compass will display the current wave height at your position any effects they are having on your boat speed. 
 
-- **Wave height** — significant wave height at your current position in metres, sourced from the GFS wave GRIB and updated each minute.
-- **Speed with wave effect** — your actual boat speed after the multiplier is applied.
-- **Polar speed** — what your speed would be from the polars alone, without wave effect.
-- **Effect indicator** — green "Surfing +N%" when you're getting a downwind bonus, red "Wretching N%" when you're taking an upwind penalty.
+![wave-o1](/images/wave-o1.png)
 
-The highlighted row in the reference table shows which wave band you're currently in.
+
+
+
 
 ---
 
