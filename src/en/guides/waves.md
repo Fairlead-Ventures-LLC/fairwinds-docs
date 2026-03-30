@@ -1,5 +1,5 @@
 ---
-alayout: base-en.html
+layout: base-en.html
 typora-root-url: ../..
 title: Waves and Boat Speed
 ---
@@ -8,11 +8,14 @@ title: Waves and Boat Speed
 
 <p class="lead">FairWinds models real ocean wave conditions using live GFS wave forecasts. When significant wave height exceeds 3 metres, your boat speed is affected — upwind is harder, downwind you can surf.</p>
 
-The world's waves are really interesting. The distribution of significant wave height (SWH) globally at any given time is
-<3 meters - 75% ocean surface
-3-4 meters - 15%
-4-5 meters - 5%
-5+ meteres - 5%
+The world's waves are really interesting. The distribution of significant wave height (SWH) globally at any given time is:
+
+| Wave height | % of ocean surface |
+|-------------|-------------------|
+| < 3 m       | 75%               |
+| 3 – 4 m     | 15%               |
+| 4 – 5 m     | 5%                |
+| 5 m+        | 5%                |
 
 **Correlation**
 
@@ -30,7 +33,7 @@ You can really see this all illustrated  the southern ocean with the waves overl
 
 Wave heights come from the **GFS Wave model** (0.5° resolution), the same global forecast system used by professional routing tools. FairWinds fetches the significant wave height field (Hₛ) and interpolates it to your exact position and time using bilinear spatial interpolation and linear time interpolation between forecast steps.
 
-The current wave data is always available on https://fairwinds.world/wind
+The current wave data is always available on [fairwinds.world/wind](https://fairwinds.world/wind)
 
 The wave forecast updates daily at 06 UTC. Below 3 m significant wave height, there is no speed effect — typical open ocean racing conditions. The effect only kicks in when seas are genuinely rough.
 
@@ -94,7 +97,7 @@ In order for waves to be consdiered in your route
 
 1. The waves polar must be installed and
 
-2. A wave grib file must be loaded. The active wave gribs provided on the https://fairwinds.world/wind page.
+2. A wave GRIB file must be loaded. The active wave GRIBs are available on the [fairwinds.world/wind](https://fairwinds.world/wind) page.
 
    ![waves1](/images/waves1.png)
 
