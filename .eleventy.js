@@ -14,6 +14,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
   
+  // Copy CNAME for GitHub Pages custom domain
+  eleventyConfig.addPassthroughCopy("CNAME");
+  
   // Watch for changes in CSS
   eleventyConfig.addWatchTarget("src/css/");
   
