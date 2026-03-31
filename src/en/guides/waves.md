@@ -19,9 +19,9 @@ The world's waves are really interesting. The distribution of significant wave h
 
 **Correlation**
 
-So in our simulation, we are catch the top 25% of all wave fields. You may say "but this just correlates to high wind!" Actuallly, no! For example 30% of the waves 3m+ are in winds less than 5 knots!  And the correlation between wind speed and and wave height in the 3m+ band is r = 0.02. Almost nothing. 
+Do waves just following the highest winds? Not really!  In fact 30% of the waves in the 'high band' (3m+) are in winds less than 5 knots!  And the correlation between wind speed and and wave height in the 3m+ band is r = 0.02. Almost nothing. 
 
-Wave routing is genuinely an independent strategic dimension and not just a wind field. Additinoally wave fields are highly variable forecaast to forecast. ~50% of predicted wave heights in 3-5+m change bands from day to day!
+Wave routing is genuinely an independent strategic dimension and not just an add on to the wind field. Additionally wave fields are highly variable forecast to forecast. ~50% of predicted wave heights in 3-5+m change bands from day to day!
 
 You can really see this all illustrated  the southern ocean with the waves overlaid on the wind colors
 
