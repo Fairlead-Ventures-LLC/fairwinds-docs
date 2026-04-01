@@ -6,7 +6,32 @@ title: Release Notes
 
 # Release Notes
 
-Jump to: [March 19, 2025](#march-19-2025) · [March 12, 2025](#march-12-2025) · [March 5, 2025](#march-5-2025) · [March 4, 2025](#march-4-2025) · [February 26, 2025](#february-26-2025)
+Jump to: [April 1, 2025](#april-1-2025) · [March 19, 2025](#march-19-2025) · [March 12, 2025](#march-12-2025) · [March 5, 2025](#march-5-2025) · [March 4, 2025](#march-4-2025) · [February 26, 2025](#february-26-2025)
+
+---
+
+## April 1, 2025
+
+This week's release contains the final set of features to bring **Waves** physics live in the simulator. We've documented everything in the official docs — read all about how waves affect your boat speed, how to download the wave GRIBs, and how to set up QTVLM for wave routing:
+
+[docs.fairwinds.world/en/guides/waves/](https://docs.fairwinds.world/en/guides/waves/)
+
+We'll be trying it out in the next OM race from Kerguelen to Perth.
+
+**Minor updates**
+
+- Race and expedition cards now show if **Currents** or **Waves** are enabled — thanks GrandPhi & Mutley!
+- Added a **Clear** button to the Marks panel so you can clear all marks at once.
+- Gate information is now hidden on the race detail page for races that have hidden gates.
+- A new **Pacific Cup** section on the dashboard highlights regatta events in partnership with [pacificcup.org](https://pacificcup.org/).
+
+**Bug fixes**
+
+- The reckoning line in the waypoint scheduler was not updating when toggling tacks in VMC scheduled events. Port/starboard preview now works correctly.
+
+Release notes are saved in the documentation so you can always refer back to them: [docs.fairwinds.world/en/release-notes](https://docs.fairwinds.world/en/release-notes)
+
+Looking forward to the OM7 race and the treasure hunt this weekend. Happy Easter to all!
 
 ---
 
