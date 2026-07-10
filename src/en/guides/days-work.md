@@ -54,4 +54,13 @@ The Day's Work is how you keep that error bounded.
 
 ---
 
-*Each step has its own page with the recipe, timing, and what to do in FairWinds.*
+## Step-by-step guides
+
+- [AM Twilight Star Fix](days-work/am-stars/)
+- [Sunrise Longitude Fix](days-work/sunrise-lon/)
+- [AM Sun Sight](days-work/am-sun/)
+- [Noon Sight](days-work/noon/)
+- [PM Sun Sight / Running Fix](days-work/pm-sun/)
+- [Sunset Longitude Fix](days-work/sunset-lon/)
+- [PM Twilight Star Fix](days-work/pm-stars/)
+- [Picking Stars for a Fix](days-work/star-selection/)

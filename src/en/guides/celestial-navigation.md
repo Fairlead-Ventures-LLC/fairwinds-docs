@@ -13,35 +13,59 @@ title: Celestial Navigation
 
 Celestial navigation is the practice of determining your position at sea using observations of celestial bodies — the sun, moon, planets, and stars. In FairWinds, cel nav is fully modeled and pairs naturally with **No GPS mode**, where lat/long readouts are disabled and you must find your own way.
 
-*More detail coming soon.*
+The core skill is building a daily rhythm of observations that keeps your position estimate accurate. A good navigator is never more than 12 hours from their last confirmed fix.
+
+---
+
+## The Sky Tool
+
+The Sky Tool is your in-game sextant. It lets you observe celestial bodies and compute lines of position (LOPs) that you can cross to establish a fix.
+
+[The Sky Tool — full guide →](/en/guides/sky-tool/)
+
+---
+
+## Dead Reckoning (DR)
+
+A DR is a projection of where you will be based on a known position, a heading, and a speed over time. In FairWinds you create DRs in the **Positions panel**.
+
+The DR is what connects your last fix to your next observation:
+
+- It predicts when the sun will rise, transit, and set
+- It gives you a starting point for advancing LOPs in a running fix
+- It accumulates error — which is why daily observations matter
+
+The more accurate your last fix, the more useful your DR.
 
 ---
 
 ## Nav View vs Chart View
 
-FairWinds has two complementary views when sailing celestially:
+FairWinds has two complementary views:
 
-- **Nav View** — your instrument panel. Heading, speed, apparent wind, and your sextant readings.
-- **Chart View** — the map. In No GPS mode the chart is blacked out or fogged until you establish a fix.
-
-Understanding when to switch between them is key to efficient cel nav practice.
-
-*More detail coming soon.*
+- **Nav View** — your instrument panel. Heading, speed, apparent wind.
+- **Chart View** — the map. In No GPS mode your fix positions and LOPs appear here. Your true position is hidden until you establish a fix.
 
 ---
 
-## The Sky Tool and Taking Fixes
+## Bowditch's Day's Work
 
-The Sky Tool is your in-game sextant. It lets you observe celestial bodies and compute lines of position (LOPs) that you can plot on the chart to establish a fix.
+The structured daily observation routine used by GGR navigators. Seven steps — twilight stars, sun sights, noon, and horizon longitude fixes — that together give you a confirmed position every day.
 
-For a full walkthrough of the Sky Tool, see the dedicated guide: [The Sky Tool →](/en/guides/sky-tool/)
+> **If you only do one thing: get a twilight fix.** Dawn and dusk are the only times stars and horizon are visible together. Three stars, twenty minutes, and you know exactly where you are.
 
-*More detail coming soon.*
+[Bowditch's Day's Work →](/en/guides/days-work/)
 
----
+### The seven steps
 
-## Getting in Rhythm with the Sky
+- [AM Twilight Star Fix](/en/guides/days-work/am-stars/)
+- [Sunrise Longitude Fix](/en/guides/days-work/sunrise-lon/)
+- [AM Sun Sight](/en/guides/days-work/am-sun/)
+- [Noon Sight](/en/guides/days-work/noon/)
+- [PM Sun Sight / Running Fix](/en/guides/days-work/pm-sun/)
+- [Sunset Longitude Fix](/en/guides/days-work/sunset-lon/)
+- [PM Twilight Star Fix](/en/guides/days-work/pm-stars/)
 
-Celestial navigation is as much about timing as it is about math. The sun rises and sets on a schedule, twilight gives you the best star sights, and noon sights are the classic latitude check. This section covers building a daily routine around the sky's rhythms so you always have a fix when you need one.
+### Reference
 
-*More detail coming soon.*
+- [Picking Stars for a Fix](/en/guides/days-work/star-selection/)
