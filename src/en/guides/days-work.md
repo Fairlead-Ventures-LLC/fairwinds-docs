@@ -1,9 +1,9 @@
 ---
 layout: base-en.html
-title: Bowditch's Day's Work
+title: Daily Fixes
 ---
 
-# Bowditch's Day's Work
+# Daily Fixes
 
 <p class="lead">Seven observations that give you a full position every day using nothing but the sun and stars.</p>
 
@@ -11,7 +11,7 @@ title: Bowditch's Day's Work
 
 ---
 
-The "Day's Work" is the daily celestial navigation routine described in Bowditch's *American Practical Navigator* — the standard reference since 1802. GGR navigators follow this same sequence. Each observation has a specific window and a specific purpose. Miss one and you lose that chance until tomorrow.
+The daily fix routine is the celestial navigation rhythm described in Bowditch's *American Practical Navigator* — the standard reference since 1802. GGR navigators follow this same sequence. Each observation has a specific window and a specific purpose. Miss one and you lose that chance until tomorrow.
 
 The goal by end of day: a confirmed position fix good enough to reset your DR and plan the next 24 hours.
 

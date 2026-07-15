@@ -7,7 +7,7 @@ title: Noon Sight
 
 <p class="lead">Watch the sun reach its highest point. That altitude gives you your latitude directly — no tables needed.</p>
 
-← Back to [Bowditch's Day's Work](/en/guides/days-work/)
+← Back to [Daily Fixes](/en/guides/days-work/)
 
 ---
 

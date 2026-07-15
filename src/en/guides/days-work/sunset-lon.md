@@ -7,7 +7,7 @@ title: Sunset Longitude Fix
 
 <p class="lead">Time the moment the sun's lower limb touches the horizon at sunset. Same technique as sunrise, opposite end of the day.</p>
 
-← Back to [Bowditch's Day's Work](/en/guides/days-work/)
+← Back to [Daily Fixes](/en/guides/days-work/)
 
 ---
 

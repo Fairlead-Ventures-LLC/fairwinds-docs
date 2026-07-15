@@ -7,7 +7,7 @@ title: Picking Stars for a Fix
 
 <p class="lead">Three rules: spread them around the compass, keep them off the horizon, pick bright ones you can identify.</p>
 
-← Back to [Bowditch's Day's Work](/en/guides/days-work/)
+← Back to [Daily Fixes](/en/guides/days-work/)
 
 ---
 

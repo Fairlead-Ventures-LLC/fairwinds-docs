@@ -7,7 +7,7 @@ title: AM Twilight Star Fix
 
 <p class="lead">The most accurate fix of the day. Shoot multiple stars at dawn while the horizon is still sharp.</p>
 
-← Back to [Bowditch's Day's Work](/en/guides/days-work/)
+← Back to [Daily Fixes](/en/guides/days-work/)
 
 ---
 

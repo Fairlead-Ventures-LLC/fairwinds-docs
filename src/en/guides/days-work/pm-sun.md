@@ -7,7 +7,7 @@ title: PM Sun Sight / Running Fix
 
 <p class="lead">Shoot the sun in the afternoon, then advance your noon latitude forward to get a full afternoon fix.</p>
 
-← Back to [Bowditch's Day's Work](/en/guides/days-work/)
+← Back to [Daily Fixes](/en/guides/days-work/)
 
 ---
 

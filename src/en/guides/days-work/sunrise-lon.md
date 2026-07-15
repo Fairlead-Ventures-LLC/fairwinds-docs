@@ -7,7 +7,7 @@ title: Sunrise Longitude Fix
 
 <p class="lead">Time the moment the sun's lower limb touches the horizon. That time is your longitude.</p>
 
-← Back to [Bowditch's Day's Work](/en/guides/days-work/)
+← Back to [Daily Fixes](/en/guides/days-work/)
 
 ---
 

@@ -7,7 +7,7 @@ title: AM Sun Sight
 
 <p class="lead">Shoot the sun 1–2 hours after sunrise. This line gets run forward to give you the noon fix.</p>
 
-← Back to [Bowditch's Day's Work](/en/guides/days-work/)
+← Back to [Daily Fixes](/en/guides/days-work/)
 
 ---
 

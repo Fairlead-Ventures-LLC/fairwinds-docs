@@ -7,7 +7,7 @@ title: PM Twilight Star Fix
 
 <p class="lead">The mirror of the dawn star fix. Shoot multiple stars at dusk, reset the DR, and go into the night with a confirmed position.</p>
 
-← Back to [Bowditch's Day's Work](/en/guides/days-work/)
+← Back to [Daily Fixes](/en/guides/days-work/)
 
 ---
 
