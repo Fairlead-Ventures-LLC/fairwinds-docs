@@ -26,7 +26,7 @@ From any race, tap the **Sky** button in the bottom navigation bar. The Sky Tool
 ## Taking a Sight
 
 1. **Find a body** — pan the sky or use the **Best Bodies** panel to see which stars, planets, or the sun are well-placed right now.
-2. **Enter sextant mode** — tap the sextant icon to start the mini-game.
+2. **Enter sextant mode** — tap the sextant icon to open the sight-taking view.
 3. **Acquire** — center the reticle on your target and lock it.
 4. **Align** — use the drum to bring the body down to the horizon line. Your alignment accuracy determines the error on your observed altitude (Hs).
 5. **Mark and save** — confirm the sight. It records Hs (in DMS), UTC to the second, your DR position, and environmental parameters.
