@@ -5,7 +5,7 @@ title: Sunset Longitude Fix
 
 # Sunset Longitude Fix
 
-<p class="lead">Time the moment the sun's lower limb touches the horizon at sunset. Same technique as sunrise, opposite end of the day.</p>
+<p class="lead">Time the moment the sun's center bisects the horizon at sunset — the disc exactly half-submerged. Same technique as sunrise, opposite end of the day.</p>
 
 ← Back to [Daily Fixes](/en/guides/days-work/)
 
@@ -20,7 +20,7 @@ title: Sunset Longitude Fix
 1. Note your predicted sunset time from the Day's Work panel
 2. Be ready at the sextant a few minutes before, horizon clear
 3. Open the Sky Tool → **Solar** tab → **Sunrise/Sunset**
-4. At the moment the sun's lower limb touches the horizon, record the UTC time
+4. At the moment the sun's center bisects the horizon (disc half-submerged), record the UTC time
 5. Save the longitude fix — it plots a north-south LOP on the chart
 
 ## Why

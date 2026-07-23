@@ -33,6 +33,18 @@ This also sets up your DR for the rest of the afternoon and the evening twilight
 
 Same as the AM sight — Solar tab, save the LOP. Use the Running Fix tool to advance the noon fix forward and cross it with the afternoon LOP.
 
+### How FairWinds computes your Sun-Run-Sun run
+
+When you compute a running fix from two sun sights, FairWinds uses the DR positions stored with each sight:
+
+1. At sight capture time, each sight stores UTC plus the current DR latitude/longitude.
+2. Running Fix computes the run vector from DR1 -> DR2 (distance and course).
+3. Displayed speed is derived from that interval (`distance / elapsed time`) — effectively the average speed between sights.
+
+This means the run is **not** based on "initial speed only." It is based on the two DR points attached to the selected sights.
+
+If you use a constant DR assumption (for example 6 kn), set that in your Positions workflow and keep it consistent between the two sights. Changing DR assumptions later does not rewrite DR values already stored on older sights.
+
 ---
 
 *Required — gives you an afternoon position and resets the DR for the evening.*

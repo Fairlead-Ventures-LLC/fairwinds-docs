@@ -5,7 +5,7 @@ title: Sunrise Longitude Fix
 
 # Sunrise Longitude Fix
 
-<p class="lead">Time the moment the sun's lower limb touches the horizon. That time is your longitude.</p>
+<p class="lead">Time the moment the sun's center bisects the horizon — the disc exactly half-risen. That time is your longitude.</p>
 
 ← Back to [Daily Fixes](/en/guides/days-work/)
 
@@ -20,7 +20,7 @@ title: Sunrise Longitude Fix
 1. Note your predicted sunrise time from the Day's Work panel (based on your current DR)
 2. Be at the sextant a few minutes before, horizon clear
 3. Open the Sky Tool → **Solar** tab → **Sunrise/Sunset**
-4. At the moment the sun's lower limb clears the horizon, record the UTC time
+4. At the moment the sun's center bisects the horizon (disc half-risen), record the UTC time
 5. Save the longitude fix — it plots a north-south line of position on the chart
 
 ## Why
