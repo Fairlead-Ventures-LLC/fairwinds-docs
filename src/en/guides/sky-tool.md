@@ -26,10 +26,10 @@ From any race, tap the **Sky** button in the bottom navigation bar. The Sky Tool
 ## Taking a Sight
 
 1. **Find a body** — pan the sky or use the **Best Bodies** panel to see which stars, planets, or the sun are well-placed right now.
-2. **Enter sextant mode** — tap the sextant icon to open the sight-taking view.
+2. **Enter sextant mode** — tap the **Sextant** button in the top right to open the sight-taking view.
 3. **Acquire** — center the reticle on your target and lock it.
-4. **Align** — use the drum to bring the body down to the horizon line. Your alignment accuracy determines the error on your observed altitude (Hs).
-5. **Mark and save** — confirm the sight. It records Hs (in DMS), UTC to the second, your DR position, and environmental parameters.
+4. **Align** — use the drum to bring the body down to the horizon line. For a sun sight, bring the bottom edge of the orange disc (the lower limb) to just touch the top of the blue horizon line. Your alignment accuracy determines the error on your observed altitude (Hs).
+5. **Mark and save** — confirm the sight. It records Hs (in DMS), UTC to the second, your GPS position (Guided mode) or DR position (Expert / No GPS mode), and environmental parameters.
 
 ---
 
@@ -50,7 +50,7 @@ After every interaction you get a quality rating. There are two:
 
 For the best fix quality, choose bodies whose azimuths are 60–120° apart. Two bodies at right angles give a near-ideal 90° crossing; three bodies spread ~120° apart form a tight triangle fix.
 
-> **Why doesn't an Excellent fix show my exact position?** The FairWinds drum reads to 0.1 arcminutes — matching a real vernier micrometer sextant. A perfect alignment scores 0.0', and an Excellent rating requires less than 2'. In Guided mode your GPS position is used as the assumed position, so the only error in the fix comes from your sight alignment. An Excellent sight (< 2 arcmin) with a Good or Excellent crossing angle will typically land within **1–2 nautical miles** of true position — that's the expected accuracy of real-world celestial navigation, not a FairWinds limitation. In No GPS / Expert mode your DR accumulates error over time, so a stale or inaccurate DR will shift the fix further. If your fix is off by more than a few miles, check your azimuth spread and make sure your DR is recent.
+> **Why doesn't an Excellent fix show my exact position?** The FairWinds drum reads to 0.1 arcminutes — matching a real vernier micrometer sextant. A perfect alignment scores 0.0', and an Excellent rating requires less than 2'. In Guided mode your GPS position is used as the assumed position, so the only error in the fix comes from your sight alignment. An Excellent sight with a Good or Excellent crossing angle will typically land within **1–2 nautical miles** of true position. That's not a FairWinds limitation — in real life, a 3-body star fix with a quality sextant and sharp technique producing a triangle under 1 NM is considered exceptional. Elite offshore navigators shooting twilight stars would be thrilled with that result. In No GPS / Expert mode your DR accumulates error on top, so a stale DR will shift the fix further. If your fix is off by more than a few miles, check your azimuth spread and make sure your DR is recent.
 
 ---
 
