@@ -33,6 +33,27 @@ From any race, tap the **Sky** button in the bottom navigation bar. The Sky Tool
 
 ---
 
+## Sight and Fix Quality Ratings
+
+After every interaction you get a quality rating. There are two:
+
+**Sight quality** is shown immediately after you mark a sight. It measures how accurately you brought the body down to the horizon line — the alignment error in arcminutes. One arcminute of error equals roughly one nautical mile of position error in your LOP.
+
+**Fix quality** is shown when you cross two or three LOPs to compute a fix. It measures the crossing angle between the LOPs — a shallower crossing stretches the uncertainty ellipse and makes the fix less reliable.
+
+| Rating | Sight (alignment error) | Fix (LOP crossing angle) |
+|---|---|---|
+| Excellent | < 2 arcmin | ≥ 70° |
+| Good | 2 – 4.9 arcmin | 40° – 69° |
+| Fair | 5 – 14.9 arcmin | 20° – 39° |
+| Poor | ≥ 15 arcmin | < 20° |
+
+For the best fix quality, choose bodies whose azimuths are 60–120° apart. Two bodies at right angles give a near-ideal 90° crossing; three bodies spread ~120° apart form a tight triangle fix.
+
+> **Why doesn't an Excellent fix show my exact position?** The sextant mini-game rewards real-sextant accuracy — a good sextant reads to about 1 arcminute, and that's roughly what an Excellent rating requires. In Guided mode your GPS position is used as the assumed position, so the only error in the fix comes from your sight alignment. An Excellent sight (< 2 arcmin) with a Good or Excellent crossing angle will typically land within **1–2 nautical miles** of true position — that's the expected accuracy of real-world celestial navigation, not a FairWinds limitation. In No GPS / Expert mode your DR accumulates error over time, so a stale or inaccurate DR will shift the fix further. If your fix is off by more than a few miles, check your azimuth spread and make sure your DR is recent.
+
+---
+
 ## Navigation Modes
 
 FairWinds offers two modes that control how much of the math the game does for you:
