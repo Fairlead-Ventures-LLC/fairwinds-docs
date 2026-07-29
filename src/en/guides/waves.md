@@ -6,7 +6,7 @@ title: Waves and Boat Speed
 
 # Waves and Boat Speed
 
-<p class="lead">FairWinds models real ocean wave conditions using live GFS wave forecasts. When significant wave height exceeds 3 metres, your boat speed is affected — upwind is harder, downwind you can surf.</p>
+<p class="lead">FairWinds models real ocean wave conditions using live GFS Wave forecasts. When significant wave height exceeds 3 metres, your boat speed is affected — punching into a head sea costs you, surfing a following sea gains you, and getting caught beam-on in a big swell is never free.</p>
 
 The world's waves are really interesting. The distribution of significant wave height (SWH) globally at any given time is:
 
@@ -19,91 +19,101 @@ The world's waves are really interesting. The distribution of significant wave h
 
 **Correlation**
 
-Do waves just following the highest winds? Not really!  In fact 30% of the waves in the 'high band' (3m+) are in winds less than 5 knots!  And the correlation between wind speed and and wave height in the 3m+ band is r = 0.02. Almost nothing. 
+Do waves just follow the highest winds? Not really! In fact 30% of the waves in the 'high band' (3m+) are in winds less than 5 knots! And the correlation between wind speed and wave height in the 3m+ band is r = 0.02 — almost nothing.
 
-Wave routing is genuinely an independent strategic dimension and not just an add on to the wind field. Additionally wave fields are highly variable forecast to forecast. ~50% of predicted wave heights in 3-5+m change bands from day to day!
+Wave routing is genuinely an independent strategic dimension, not just an add-on to the wind field. Wave fields are also highly variable forecast to forecast — roughly 50% of predicted wave heights in the 3–5m+ change bands shift from one day to the next.
 
-You can really see this all illustrated  the southern ocean with the waves overlaid on the wind colors
+You can really see this illustrated in the Southern Ocean, with waves overlaid on the wind colors:
 
 ![southernocean](/images/southernocean.png)
 
 ---
 
-## How Wave Data Works
+## Data Source
 
-Wave heights come from the **GFS Wave model** (0.5° resolution), the same global forecast system used by professional routing tools. FairWinds fetches the significant wave height field (Hₛ) and interpolates it to your exact position and time using bilinear spatial interpolation and linear time interpolation between forecast steps.
+Wave data comes from the **NOAA GFS Wave model** (global, 0.25° resolution), the same wave forecast system used by professional offshore routing tools. Two fields are fetched for every forecast cycle:
 
-The current wave data is always available on [fairwinds.world/wind](https://fairwinds.world/wind)
+| Parameter | GRIB2 code | What it is |
+|-----------|-----------|------------|
+| Significant wave height | `HTSGW` | The average height (trough to crest) of the largest third of waves, in metres |
+| Primary wave direction  | `DIRPW` | The direction the dominant wave train is **travelling toward** (oceanographic convention — opposite of how wind direction is reported) |
 
-The wave forecast updates daily at 06 UTC. Below 3 m significant wave height, there is no speed effect — typical open ocean racing conditions. The effect only kicks in when seas are genuinely rough.
+Both fields are fetched four times a day alongside the wind GRIBs and pushed to the simulator and router-service. FairWinds interpolates both fields to your exact position and time using bilinear spatial interpolation and linear time interpolation between forecast steps, so the wave state under your boat updates smoothly as you sail and as new forecast cycles arrive.
 
-Waves are enabled on a per-race basis by the race creator. If your race has waves active, you'll see a wave panel in the instruments.
+The current wave data is always viewable on [fairwinds.world/wind](https://fairwinds.world/wind).
 
----
-
-## Speed Effects
-
-Wave effects are multiplicative — applied on top of your polar boat speed for the current wind. Motor propulsion is not affected, only sail.
-
-The effect depends on two things: **how big the waves are** and **whether you're going upwind or downwind** (split at 90° TWA).
-
-| Significant wave height | Upwind (TWA ≤ 90°) | Downwind (TWA > 90°) |
-|------------------------|-------------------|---------------------|
-| Below 3 m              | No effect         | No effect           |
-| 3 – 4 m                | −6%               | +6%                 |
-| 4 – 5 m                | −8%               | +8%                 |
-| 5 m and above          | −10%              | +10%                |
-
-Going upwind in heavy seas is a grind — you're punching into the swell. Going downwind, you get to surf, gaining the same magnitude of boost as the upwind penalty. A 5 m+ swell is worth ±10% — enough to make routing through or around a swell band a meaningful strategic decision. Do you stay in the surf in lighter wind or head to a flatter area with better wind?
+Waves are enabled on a per-race basis by the race creator. If your race has waves active, you'll see a wave readout in the instruments and can toggle a wave overlay on the chart.
 
 ---
 
-## Reading the Waves
+## Physics Implementation
 
-The 'Waves' button in the Wind controls panel will toggle the wave field on/off. It shows the waves in 3m, 4m, and 5m bands corresponding to the performance impact area. The compass will display the current wave height at your position any effects they are having on your boat speed. 
+Wave effects are a **stateless, per-minute speed multiplier** applied on top of your polar boat speed for the current wind — there's no fatigue accumulator or drain, just height and geometry. Motor propulsion is not affected, only sail.
+
+Two inputs drive the multiplier:
+
+1. **Significant wave height (Hs)** — how big the sea state is.
+2. **Angle to waves** — the angle between your boat's heading and the direction the waves are coming from (0° = waves hit you dead on the bow, 180° = waves are pushing you from directly astern).
+
+This is deliberately **not** the same as True Wind Angle. Wind and waves are very often *not* aligned — a classic example is a departing low that has rotated the wind while the old swell train is still running in its original direction, or true cross-swell from two independent storm systems. Using true wave angle rather than wind angle means a boat beating upwind into leftover swell from a different direction is modeled correctly, distinct from beating into wind-aligned seas.
+
+Below **3 m** Hs, there is no effect at all — typical open-ocean racing conditions.
+
+Above 3 m, your angle-to-waves is bucketed into three zones, and the multiplier scales with wave height inside each zone:
+
+| Angle to waves | Zone | 3–4 m | 4–5 m | 5 m+ |
+|-----------------|------|-------|-------|------|
+| < 60°   (into it) | Into waves | −5%  | −15% | −30% |
+| 60°–120° (beam)   | Beam seas  | −3%  | −9%  | −12% |
+| > 120°  (with it) | With waves | +5%  | +9%  | +12% |
+
+A few things worth noting about the shape of this table, since they reflect deliberate design choices, not just arbitrary numbers:
+
+- **The penalty for going into it is asymmetric and steep.** Punching into a 5m+ head sea is genuinely brutal — the penalty escalates much faster than the bonus for running with the same sea, mirroring how offshore sailors actually describe big head seas versus big following seas.
+- **Beam seas are never free**, even though they sit "between" the penalty and bonus zones. Taking a big swell on the beam carries real rolling risk and is uncomfortable and slow — real ocean navigators generally avoid deliberately sailing beam-on to big swell, so the model reflects a real (if moderate) penalty rather than a neutral zone.
+- **The bonus for surfing plateaus.** Downwind in big following seas you do get faster, but the gain tops out — you can only surf so much benefit out of a given sea state.
+- **120° is the boundary between the into/beam and with-it zones** because that roughly matches where most A1/A3-style downwind sail configurations start being considered "downwind" — familiar to anyone who's raced with asymmetric kites.
+
+Wave period, and the more complex case of true multi-train "confused seas" (partitioned wind-sea vs. swell), are deliberately excluded from this model for now. This game has no auto-router — players need to be able to predict and plan around this in their head, so simple-and-legible beats a more "complete" but opaque model.
+
+Route mode and scheduled waypoints both respect the wave multiplier when calculating segment speeds, using the boat's projected heading at each point along the route.
+
+---
+
+## What You'll See in the Viewer
+
+**Wave overlay.** The 'Waves' button in the wind controls panel toggles a wave field overlay on the chart — a shaded height gradient plus small chevrons showing the direction waves are travelling toward, sampled across the visible area.
 
 ![wave-o1](/images/wave-o1.png)
 
+**Instrument readout.** Your compass/instrument panel shows the current significant wave height at your position (`SWH`) and the resulting effect on your polar speed, framed as a **% of polar** — e.g. `Pol (Into waves) −15%` or `Pol (With waves) +9%` — along with which zone you're currently in (Into waves / Beam seas / With waves). This framing is intentional: it's the same number you'd manually apply to a polar-derived route time in an external router like QTVLM, so you can reason about and route around wave effects even without an in-game auto-router.
 
-
-
+**Dead-reckoning line.** The reckoning line projections (manual heading, TWA, VMG, VMC, and route modes) all account for the wave multiplier at each projected point along the line, so the predicted track and ETA already reflect expected wave conditions ahead — not just current conditions.
 
 ---
 
 ## Notes
 
 - Wave effects are opt-in per race — most races do not have them enabled.
-- The effect is applied sail-only. Motoring through big seas is unaffected.
+- The effect is sail-only. Motoring through big seas is unaffected.
 - Route mode and scheduled waypoints both respect the wave multiplier when calculating segment speeds.
 - If wave data is unavailable for your position or time window, the multiplier defaults to 1.0 (no effect).
-- Waves are already built into the FairWinds router if enabled
+- Waves are already built into the FairWinds router when enabled.
 
 ---
 
-## Routing with Waves in QTVLM
+## Routing with Waves in QTVLM (Manual, Leg by Leg)
 
-To factor wave effects into your QTVLM routes, you need to load the FairWinds polar wave file. This tells QTVLM exactly the same speed multipliers the FairWinds sim uses, so your routed times will match the race.
+Earlier versions of this page pointed to a downloadable wave polar file (`fw.polwave.csv`) that let QTVLM apply a wave speed multiplier automatically across a **fully auto-routed** course. **We've retired that approach**, because the old wave model only needed True Wind Angle to look up a multiplier, so it could be baked into a polar file and routed against natively. The current model depends on **angle to waves** — the angle between your heading and the actual wave direction, which is frequently *not* the same as the wind direction. QTVLM's polar format has no independent "wave direction" axis, so there's no way to encode this model into a file QTVLM can auto-route against. A file that tried would silently fall back to treating wave angle as wind angle — exactly the shortcut this model exists to avoid.
 
-**Download:** [fw.polwave.csv](/assets/fw.polwave.csv)
+**Full auto-routing in QTVLM will not account for wave effects. But you can still route through waves accurately using QTVLM's manual waypoint mode**, applying the "% of polar" adjustment leg by leg yourself:
 
-The file encodes the speed multipliers by TWA and wave height (in metres):
+1. **Lay down waypoints** for your candidate course in QTVLM instead of relying on the full auto-router — break the course into legs at points where the wind or wave picture changes meaningfully (e.g. either side of a swell band).
+2. **Check the wave overlay** for each leg, either in the FairWinds viewer or on [fairwinds.world/wind](https://fairwinds.world/wind), and note the significant wave height and direction along that leg.
+3. **Work out your angle to waves for that leg** — the difference between your planned heading and the wave direction shown — and look it up in the table above (Into waves / Beam seas / With waves, banded by Hs).
+4. **Apply that % directly to QTVLM's polar-computed leg speed** (or leg time) for that segment, the same way you'd hand-adjust for a current you know QTVLM isn't modeling.
+5. **Re-check waypoint by waypoint** as forecasts update — wave fields shift meaningfully forecast to forecast, so a leg that was a wash yesterday might be a big penalty or bonus today.
 
-| TWA | 0–2 m | 3 m | 4 m | 5 m+ |
-|-----|-------|-----|-----|------|
-| 0–90° (upwind) | No effect | −6% | −8% | −10% |
-| 100–180° (downwind) | No effect | +6% | +8% | +10% |
+Once you're actually racing, the in-game "% of polar" readout on your instruments tells you exactly what multiplier is being applied in real time at your position — that's the same number this manual process approximates ahead of time, so you can sanity-check your plan against it as you sail.
 
-In order for waves to be consdiered in your route
-
-1. The waves polar must be installed and
-
-2. A wave GRIB file must be loaded. The active wave GRIBs are available on the [fairwinds.world/wind](https://fairwinds.world/wind) page.
-
-   ![waves1](/images/waves1.png)
-
-   ![waves2](/images/waves2.png)
-
-### QTVLM Installation
-
-> **Note:** There is a bug in QTVLM — it won't import the file directly through the UI in the 'Import' button. You have to place it manually in the Applications/QTVLM/polars directory and restart QTVLM for the option to appear.
-
+This is a deliberate trade-off: a wave model that's realistic and rewards understanding *why* a sea state matters on a given heading, at the cost of not being push-button compatible with QTVLM's full auto-router. Waypoint-and-adjust gets you a genuinely wave-aware route; it just takes the extra step a black-box formula would otherwise hide from you anyway. If you were relying on the old CSV file, it's no longer maintained and will not reflect the current in-race physics.
