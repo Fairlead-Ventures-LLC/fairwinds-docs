@@ -63,18 +63,18 @@ Above 3 m, your angle-to-waves is bucketed into three zones, and the multiplier 
 
 | Angle to waves | Zone | 3–4 m | 4–5 m | 5 m+ |
 |-----------------|------|-------|-------|------|
-| < 60°   (into it) | Into waves | −5%  | −15% | −30% |
+| < 60°   (into it) | Into waves | −5%  | −10% | −15% |
 | 60°–120° (beam)   | Beam seas  | −3%  | −9%  | −12% |
-| > 120°  (with it) | With waves | +5%  | +9%  | +12% |
+| > 120°  (with it) | With waves | +5%  | +10% | +15% |
 
 A few things worth noting about the shape of this table, since they reflect deliberate design choices, not just arbitrary numbers:
 
-- **The penalty for going into it is asymmetric and steep.** Punching into a 5m+ head sea is genuinely brutal — the penalty escalates much faster than the bonus for running with the same sea, mirroring how offshore sailors actually describe big head seas versus big following seas.
-- **Beam seas are never free**, even though they sit "between" the penalty and bonus zones. Taking a big swell on the beam carries real rolling risk and is uncomfortable and slow — real ocean navigators generally avoid deliberately sailing beam-on to big swell, so the model reflects a real (if moderate) penalty rather than a neutral zone.
-- **The bonus for surfing plateaus.** Downwind in big following seas you do get faster, but the gain tops out — you can only surf so much benefit out of a given sea state.
-- **120° is the boundary between the into/beam and with-it zones** because that roughly matches where most A1/A3-style downwind sail configurations start being considered "downwind" — familiar to anyone who's raced with asymmetric kites.
+- **Into-it and with-it are symmetric (±5/10/15%).** Punching into a head sea and surfing the same sea state are treated as mirror-image effects of the same magnitude — a deliberate simplification for legibility over asymmetric realism (in reality the penalty for punching upwind into big seas is usually somewhat steeper than the bonus for surfing the same sea downwind, but a clean symmetric number is much easier to predict and plan around).
+- **Beam seas sit in their own, smaller-magnitude curve** (−3/−9/−12%), rather than a straight average of into-it and with-it. Taking a big swell on the beam carries real rolling risk and is uncomfortable and slow, so it's never a "free" or neutral heading — but it's also not as extreme as either of the fore-and-aft cases.
+- **120° is the boundary between the beam and with-it zones** because that roughly matches where most A1/A3-style downwind sail configurations start being considered "downwind" — familiar to anyone who's raced with asymmetric kites.
+- There's a real naval-architecture rule of thumb backing up the rough size of this bonus. Classic model-basin surf-riding research (du Cane and Goodrich, 1962, later corroborated across hull types by Kan, 1987) found that a boat capable of a given calm-water speed can be picked up and carried by a wave travelling up to **~50% faster** than that speed — so an 8-knot boat can surf-ride a wave moving at 12 knots. A separate, well-known storm-tactics threshold puts the practical safe ceiling at roughly **60% of wave speed** before you risk losing steering control and broaching. Our +5–15% bonus is deliberately conservative relative to that full ~50% surf-riding headroom — it models the routine, controllable speed gain from sailing well in a following sea, not the runaway, broach-risk end of the surf-riding curve. It also lines up with what sailors actually report: crews on lighter, quicker-planing boats (like a J/125) commonly describe picking up 2–3 knots of boat speed above true wind speed even in modest swell when surfing well, which sits squarely in the range a 10–15% bonus produces on top of a typical polar speed.
 
-Wave period, and the more complex case of true multi-train "confused seas" (partitioned wind-sea vs. swell), are deliberately excluded from this model for now. This game has no auto-router — players need to be able to predict and plan around this in their head, so simple-and-legible beats a more "complete" but opaque model.
+Wave period, and the more complex case of true multi-train "confused seas" (partitioned wind-sea vs. swell), are deliberately excluded from this model for now. The FairWinds router already accounts for waves natively (see below), but external tools like QTVLM have no way to route against this model — so it also needs to be simple and legible enough for players to reason about and plan around by hand when using an external router, not just correct as an input to our own router.
 
 Route mode and scheduled waypoints both respect the wave multiplier when calculating segment speeds, using the boat's projected heading at each point along the route.
 
@@ -86,7 +86,18 @@ Route mode and scheduled waypoints both respect the wave multiplier when calcula
 
 ![wave-o1](/images/wave-o1.png)
 
-**Instrument readout.** Your compass/instrument panel shows the current significant wave height at your position (`SWH`) and the resulting effect on your polar speed, framed as a **% of polar** — e.g. `Pol (Into waves) −15%` or `Pol (With waves) +9%` — along with which zone you're currently in (Into waves / Beam seas / With waves). This framing is intentional: it's the same number you'd manually apply to a polar-derived route time in an external router like QTVLM, so you can reason about and route around wave effects even without an in-game auto-router.
+**Instrument readout.** Your compass/instrument panel shows the full wave picture at your position:
+
+| Readout | Meaning |
+|---------|---------|
+| `SWH` | Significant wave height at your position, in metres |
+| `DIRPW` | Primary wave direction — the raw GFS Wave heading the waves are travelling **toward** |
+| `WEA` | Wave Encounter Angle — the angle between your heading and the waves, i.e. `angleToWaves` (0° = head sea, 180° = following sea) |
+| `Pol` | The resulting effect on your polar speed, framed as a **% of polar** — e.g. `Pol −15%` or `Pol +9%` |
+
+Hover any of these rows for a plain-language explanation, including which zone you're currently in (Into waves / Beam seas / With waves). Showing `DIRPW` and `WEA` alongside the raw `%` lets you see not just what's happening to your boat speed but *why* — you can check your encounter angle against the wave direction and immediately understand what changing heading by a few degrees would do to the multiplier, without needing to do the geometry in your head.
+
+The `Pol` framing is intentional: the FairWinds router already accounts for waves automatically, but this is the same number you'd manually apply to a polar-derived route time if you're routing in an external tool like QTVLM instead, which has no way to model wave direction on its own.
 
 **Dead-reckoning line.** The reckoning line projections (manual heading, TWA, VMG, VMC, and route modes) all account for the wave multiplier at each projected point along the line, so the predicted track and ETA already reflect expected wave conditions ahead — not just current conditions.
 
