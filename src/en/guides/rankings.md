@@ -10,6 +10,20 @@ title: Rankings and Scoring
 
 Live standings: [fairwinds.world/results/rankings](https://fairwinds.world/results/rankings)
 
+### Rankings vs series scoring
+
+These are **two different systems**:
+
+| | **FairWinds Rankings** (Season / World) | **Series scoring** (series results page) |
+|--|----------------------------------------|------------------------------------------|
+| Purpose | Season championship + World Ranking | Standings inside one series |
+| Style | High-point (`EventGrade / pos^0.15 × ln(N)`) | Low-point (1st = 1, 2nd = 2, …) |
+| DNF / DNS | **0 points** (still count for discards / series membership) | **Hard penalties:** DNF = `totalCompeted + 1`, DNS = `totalCompeted + 2` |
+
+`totalCompeted` = boats that finished or DNF’d in that race. DNS does **not** inflate the fleet.
+
+A DNS is cheap in Rankings (zero) but expensive in series low-point scoring. Discard thresholds are similar; the point values are not.
+
 ---
 
 ## Two Views
@@ -19,7 +33,7 @@ Live standings: [fairwinds.world/results/rankings](https://fairwinds.world/resul
 | **Season** | Official series assigned to a championship season | That season's calendar |
 | **World Ranking** | All official series | Rolling **12 months** |
 
-Both use the same points formula, the same Gold / Silver / Bronze tiers, and the same per-series discard rules. World Ranking also requires **more than one** scored race to appear (filters one-and-done sailors).
+Both use the same points formula, the same Gold / Silver / Bronze tiers, and the same per-series discard rules. World Ranking also requires **more than one** actual start (finish or DNF) to appear — auto-filled DNS does not unlock a World listing by itself.
 
 World Ranking is currently in **BETA**. All world ranking will be reset and restart **1 September 2026**.
 
@@ -36,11 +50,13 @@ Points = EventGrade / position^0.15 × ln(N)
 | Symbol | Meaning |
 |--------|---------|
 | **EventGrade** | Prestige of the race tier (see below) |
-| **position** | Finish place (1 = winner) |
-| **N** | Fleet size = finishers + DNFs (DNS does not count) |
+| **position** | Finish place (1 = winner) — finishes only |
+| **N** | Fleet size = finishers + DNFs (boats that started) |
 | **0.15** | Softens place gaps — 2nd earns about **90%** of 1st |
 
-`ln(N)` scales points up for bigger fleets and is self-limiting — no separate fleet-size cap is needed. Races with fewer than 2 scored boats award **0** points.
+`ln(N)` scales points up for bigger fleets and is self-limiting — no separate fleet-size cap is needed. Races with fewer than 2 starters award **0** points to finishers.
+
+**DNF and DNS score 0 points.** They still count as series results for discard eligibility.
 
 ---
 
@@ -58,12 +74,24 @@ Tier is about championship weight, not a global “best of N” portfolio. There
 
 ---
 
+## Series Membership and DNS
+
+If you sail **at least one** race in a series, you are treated as **in every race** of that series.
+
+- Missed races become **DNS at 0 points**
+- Those DNS slots count toward discard thresholds
+- Someone who never sailed the series at all remains a non-entry (no results)
+
+So DNS is not “invisible.” It is binary series membership with zero points.
+
+---
+
 ## Per-Series Discards
 
 Within each series, each sailor may drop their worst result(s) by **points**:
 
-| Scored races by that sailor in the series | Discards |
-|------------------------------------------|----------|
+| Results in that series (including DNS / DNF) | Discards |
+|---------------------------------------------|----------|
 | 1–4 | 0 |
 | 5–7 | 1 (keep best remaining) |
 | 8+ | 2 |
@@ -71,30 +99,74 @@ Within each series, each sailor may drop their worst result(s) by **points**:
 Rules that matter:
 
 - Discards are **per series**, not across the whole World Ranking.
-- The drop is the race with the **lowest points**, not a manually chosen race.
+- The drop is the race with the **lowest points** (DNS/DNF at 0 are natural drop candidates).
 - **Season and World both use these counted races.** A throwaway inside a series does not pad World Ranking.
 - Across different series, counted races still **add up** — there is no global top-N cherry-pick of easy events.
 
 ### Example: five-race series, one discard
 
-| Sailor | Results | Scored | Kept for Season & World |
-|--------|---------|--------|-------------------------|
-| Joe | 1, 2, 3, 4, 5 | 5 | **1, 2, 3, 4** (drops 5) |
-| Bob | DNS, 1, 1, 3, 3 | 4 | **1, 1, 3, 3** (no discard — needs ≥5 scored) |
+| Sailor | Results | Kept for Season & World |
+|--------|---------|-------------------------|
+| Pinco Pallino | 1, 2, 3, 4, 5 | **1, 2, 3, 4** (drops the 5) |
+| Mario Rossi | DNS, 1, 1, 3, 3 | **1, 1, 3, 3** (drops the DNS at 0) |
 
-Joe sailing the fifth race does not earn a free extra World contribution once that race is discarded. Bob’s DNS never enters the tally, so he does not “earn” a discard for skipping.
-
-If Bob had **DNF** instead of DNS on the first race, he would have five scored results, drop the DNF, and keep **1, 1, 3, 3**.
+Mario’s DNS is a real series result (0 points). With five results he earns one discard and throws the DNS away — same counted set size as Pinco after Pinco drops his worst finish.
 
 ---
 
-## Finish Statuses
+## Finish Statuses (FairWinds Rankings)
 
-| Status | Effect |
+| Status | Ranking points | Series result for Rankings? |
+|--------|----------------|-----------------------------|
+| **Finished** (crossing) | Formula points | Yes |
+| **DNF** (collision, quit, abandoned, timeout, etc.) | **0** | Yes — discardable |
+| **DNS** (miss after sailing ≥1 in the series) | **0** | Yes — discardable |
+| **Never in the series** | — | No — not a result at all |
+
+---
+
+## Series Low-Point Scoring
+
+Shown on each series’ **results** page. Lower total wins.
+
+### Basic Low Point
+
+| Result | Points |
 |--------|--------|
-| **Finished** (crossing) | Scored at finish position |
-| **DNF** (including collision, quit, abandoned, timeout) | Scored as last-finisher position **+ 1**; usually the discard candidate |
-| **DNS / no entry** | Race is invisible — not counted, does not help unlock a discard |
+| Finished | Finish position (1st = 1, 2nd = 2, …) |
+| DNF | `totalCompeted + 1` |
+| DNS | `totalCompeted + 2` |
+
+`totalCompeted` = finishers + DNFs in that race. DNS boats are not counted in `totalCompeted`.
+
+Example: 10 boats finish or DNF → DNF scores **11**, DNS scores **12**.
+
+### Series membership (series scoring)
+
+Any boat that appears as a participant in **any** completed race of the series gets a result for **every** completed race. Missed races are DNS.
+
+### Discards
+
+Based on how many races in the series are **completed** (same drop count for everyone):
+
+| Completed races in series | Discards |
+|---------------------------|----------|
+| 1–4 | 0 |
+| 5–7 | 1 (worst / highest points) |
+| 8+ | 2 |
+
+### Weighted variants
+
+Optional systems on the series results page also apply:
+
+- **Distance factor** — longer races weigh more (log scale)
+- **Extra multipliers** — DNF × 1.3, DNS × 2.0
+- **Series factor** — later races up to +10%
+- **Participation** (weighted_participation) — 5% / 2% bonus at 100% / 80%+ starts
+
+### Teams
+
+Best **3** boats per race; team needs at least **3** boats to qualify; same discard ladder.
 
 ---
 
@@ -109,6 +181,6 @@ If Bob had **DNF** instead of DNS on the first race, he would have five scored r
 
 ## Where to Look
 
-- In-app: **Results → Rankings** (`/results/rankings`)
-- Season list, contributing series, and tier chips are shown beside the standings
-- Scoring summary is also printed at the bottom of the rankings page
+- Rankings: **Results → Rankings** (`/results/rankings`)
+- Series low-point: each series’ **Results** page
+- Scoring summaries are also printed on those pages
