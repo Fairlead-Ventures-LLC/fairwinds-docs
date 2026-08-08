@@ -7,6 +7,10 @@ title: Celestial Navigation
 
 <p class="lead">Navigate by the stars, sun, and moon — no GPS required.</p>
 
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/df7-twMqJPo" title="Celestial Navigation in FairWinds" allowfullscreen loading="lazy"></iframe>
+</div>
+
 ---
 
 ## Overview
