@@ -10,8 +10,9 @@ title: Celestial Navigation
 <div class="video-embed">
   <iframe src="https://www.youtube-nocookie.com/embed/df7-twMqJPo?rel=0&modestbranding=1&iv_load_policy=3" title="Celestial Navigation in FairWinds" allowfullscreen loading="lazy"></iframe>
 </div>
-
 New to cel nav? Start with [The Daily Navigation Cycle](/en/guides/daily-navigation-cycle/) — the simple loop before the detail.
+
+![daily-navigation-cycle-6611294](/Users/alex/sailgame/fairwinds-docs/src/images/daily-navigation-cycle-6611294.png)
 
 ---
 
@@ -25,9 +26,13 @@ The core skill is building a daily rhythm of observations that keeps your positi
 
 ## The Sky Tool
 
-The Sky Tool is your in-game sextant. It lets you observe celestial bodies and compute lines of position (LOPs) that you can cross to establish a fix.
+The Sky Tool is your in-game sextant. It lets you observe celestial bodies and compute lines of position (LOPs) that you can cross to establish a fix. You can open up the sky tool directly from https://fairwinds.world/sky or in the race viewer.
+
+![sail-skylink](/Users/alex/sailgame/fairwinds-docs/src/images/sail-skylink.png)
 
 FairWinds offers two navigation modes — **Guided** (the game does the math) and **Expert** (you do the math externally). Both use the same sextant and record the same sight data.
+
+![expert](/Users/alex/sailgame/fairwinds-docs/src/images/expert.png)
 
 [The Sky Tool — full guide →](/en/guides/sky-tool/)
 
@@ -40,8 +45,6 @@ FairWinds offers two navigation modes — **Guided** (the game does the math) an
 In the Sky Tool, open the **Workbook**. **Solar Times** shows Sunrise / Sunset / Mer. Pass. for your position reference; the **Daily Schedule** checklist marks which observation windows you’ve completed (guide only — not a requirement).
 
 Daytime work is mostly on the **Sun** tab (AM / noon / PM / horizon lon, then **Sun-Run Fix**). Twilight work is on the **Stars** tab (LOPs → Compute Fix). Saved marks show up in the race viewer **Positions** panel.
-
-> **If you only do one thing: get a twilight fix.** Dawn and dusk are when stars and horizon are visible together. Two or three stars, reduce to LOPs, compute the fix.
 
 [Daily Fixes — full guide →](/en/guides/days-work/)
 
