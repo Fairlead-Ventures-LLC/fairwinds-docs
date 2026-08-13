@@ -5,7 +5,7 @@ title: AM Sun Sight
 
 # AM Sun Sight
 
-<p class="lead">Shoot the sun 1–2 hours after sunrise. This line gets run forward to give you the noon fix.</p>
+<p class="lead">Morning sun sight on the Sun tab — the first half of FairWinds’ sun-run-sun (Sun-Run Fix).</p>
 
 ← Back to [Daily Fixes](/en/guides/days-work/)
 
@@ -13,25 +13,29 @@ title: AM Sun Sight
 
 ## When
 
-**Sunrise to noon** — ideally when the sun is 15–30° above the horizon, roughly 1.5–2 hours after sunrise. Below 15° the refraction corrections become unreliable.
+**After sunrise until the noon window** on the Daily Schedule (required step).
 
-## The Recipe
+Aim for sun altitude about **20°–60°** — high enough to limit refraction trouble, low enough that the horizon stays sharp. Roughly mid-morning is usually right.
 
-1. Open the Sky Tool → **Solar** tab
-2. Shoot the sun, recording Hs (sextant altitude) and UTC time to the second
-3. Compute the LOP — it will run roughly north-south (sun is in the east, so your LOP crosses it)
-4. Save the LOP — you'll advance it forward to noon
+## In FairWinds (Guided)
 
-## Why
+1. Open the **Sky Tool** → **Workbook** → **Sun** tab
+2. Tap **Sextant**, acquire the sun, align the lower limb to the horizon, **Mark!** → **Save**
+3. Confirm the sight appears under **Sun Sights** with an **AM** badge
+4. You do **not** need to compute a standalone fix from this sight alone
 
-A single sun sight gives you one line. You need a second line to get a fix. The noon meridian passage gives you a clean latitude line, but you need something to cross it with — that's the morning LOP. By advancing the morning line forward by your DR run to noon, the two lines cross at a good angle and give you a full position.
+Keep this sight. Later, after your **PM Sun Sight**, you’ll select **both** AM and PM sights and run **Compute Running Fix** (see [PM Sun Sight / Running Fix](pm-sun/)).
 
-The further from noon you take the morning sight, the better the crossing angle — but the longer the advance, the more DR error creeps in. 1.5–2 hours after sunrise is the sweet spot.
+The Daily Schedule marks **AM Sun Sight** done when you’ve taken a qualifying morning sun sight.
 
-## In FairWinds
+## Why it matters
 
-Take the sight in the Solar tab. The saved LOP appears on your chart. At noon, after you take the meridian passage, use the **Running Fix** tool to advance the morning LOP by your run and cross it with the noon latitude line.
+In FairWinds the classic daytime position is a **sun-run-sun** fix: advance the morning LOP by your boat’s run, then cross it with the afternoon LOP. The AM sight is the first of those two lines — not a morning cross with noon latitude.
+
+## Expert mode
+
+Capture the same sight (Hs is recorded; Ho stays unset until you correct it). Reduce externally; you’ll enter the finished position later via **Enter Fix** → **Running Fix** after the PM sight.
 
 ---
 
-*Required — the foundation of the noon running fix.*
+*Required — first sight for the Sun-Run Fix.*

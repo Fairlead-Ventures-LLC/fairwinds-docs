@@ -5,7 +5,7 @@ title: Sunset Longitude Fix
 
 # Sunset Longitude Fix
 
-<p class="lead">Time the moment the sun's center bisects the horizon at sunset — the disc exactly half-submerged. Same technique as sunrise, opposite end of the day.</p>
+<p class="lead">Same horizon timing as sunrise — shoot the half-set sun, save a Lon fix from the Sun Worksheet.</p>
 
 ← Back to [Daily Fixes](/en/guides/days-work/)
 
@@ -13,26 +13,28 @@ title: Sunset Longitude Fix
 
 ## When
 
-**±45 minutes around sunset.** Use the predicted sunset time from the Day's Work panel as your watch cue.
+**About ±10 minutes around sunset** on the Daily Schedule (classification window about ±20 minutes).
 
-## The Recipe
+Use **Solar Times → Sunset** as your cue. Optional step — easy to combine with the PM twilight stars that follow.
 
-1. Note your predicted sunset time from the Day's Work panel
-2. Be ready at the sextant a few minutes before, horizon clear
-3. Open the Sky Tool → **Solar** tab → **Sunrise/Sunset**
-4. At the moment the sun's center bisects the horizon (disc half-submerged), record the UTC time
-5. Save the longitude fix — it plots a north-south LOP on the chart
+## In FairWinds (Guided)
 
-## Why
+1. Open the **Sky Tool** → note Sunset under **Solar Times**
+2. Near sunset, **Sextant** the **Sun** with the disc **half-submerged** (Hs ≈ 0°)
+3. **Sun** tab → select the sight with the **SET** badge
+4. **Sun Worksheet** shows **Sunrise / Sunset Fix**
+5. Tap **Save to Log**
 
-Exactly the same principle as the sunrise longitude fix — the precise UTC time of the event encodes your longitude. The sun is moving horizontally at the horizon, so latitude geometry is poor, but longitude comes out clean.
+Appears in **Positions** as a **Lon fix**. Compare it with your sunrise longitude if you took one — the difference is a quick read on how well your DR held through the day.
 
-A sunset longitude fix pairs well with a twilight star fix taken 20–30 minutes later. Together they give you a strong end-of-day position.
+## Why it matters
 
-## In FairWinds
+A fast end-of-day longitude check before twilight. It will not replace a star fix, but it is cheap insurance on longitude before dark.
 
-Same as sunrise — recorded in the Solar tab, saved automatically to the Positions panel as a north-south line.
+## Expert mode
+
+Same capture; compute longitude offline from observed UTC vs Greenwich sunset (**1 min ≈ 0.25°**), then **Enter Fix** → **Longitude Fix**.
 
 ---
 
-*Optional — easy to take, and it's the last sun observation before the stars come out.*
+*Optional — last sun observation before the stars come out.*

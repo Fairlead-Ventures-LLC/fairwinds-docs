@@ -5,52 +5,62 @@ title: Daily Fixes
 
 # Daily Fixes
 
-<p class="lead">Seven observations that give you a full position every day using nothing but the sun and stars.</p>
+<p class="lead">The Daily Schedule in the Sky Tool Workbook — when to shoot, and which FairWinds buttons to press.</p>
 
 ← Back to [Celestial Navigation](/en/guides/celestial-navigation/)
 
 ---
 
-The daily fix routine is the celestial navigation rhythm described in Bowditch's *American Practical Navigator* — the standard reference since 1802. GGR navigators follow this same sequence. Each observation has a specific window and a specific purpose. Miss one and you lose that chance until tomorrow.
+Open the **Sky Tool** → **Workbook**. Above the tabs you’ll see **Solar Times** (Sunrise / Sunset / Mer. Pass.) and the **Daily Schedule** checklist. The schedule is a guide, not a gate — you can take sights anytime.
 
-The goal by end of day: a confirmed position fix good enough to reset your DR and plan the next 24 hours.
-
-> **If you only do one thing: get a twilight fix.** Dawn and dusk are the only times you can see both the stars and the horizon at the same time. Three stars, twenty minutes, and you know exactly where you are — no DR, no prior fixes, no predicted times needed. Every other technique in the Day's Work is just trying to carry that fix forward until the next one.
+> **If you only do one thing: get a twilight fix.** Dawn and dusk are when stars and horizon are visible together. Two or three stars on the **Stars** tab, reduce to LOPs, **Compute Fix**, **Save Fix**.
 
 ---
 
 ## Types of fixes
 
-| Step | Window | Purpose | Required |
+| Step | Window (Daily Schedule) | What you do in FairWinds | Required |
 |---|---|---|---|
-| [AM Twilight Star Fix](/en/guides/days-work/am-stars/) | Dawn → Sunrise | Best accuracy — multiple bodies, wide crossing angles | Optional |
-| [Sunrise Longitude Fix](/en/guides/days-work/sunrise-lon/) | ±45 min around sunrise | Quick longitude check from timing of sunrise | Optional |
-| [AM Sun Sight](/en/guides/days-work/am-sun/) | Sunrise → Noon | Morning LOP for the noon running fix | **Yes** |
-| [Noon Sight](/en/guides/days-work/noon/) | ±15 min around transit | Latitude directly from meridian passage | **Yes** |
-| [PM Sun Sight / Running Fix](/en/guides/days-work/pm-sun/) | Noon → Sunset | Afternoon LOP; cross with noon for an afternoon fix | **Yes** |
-| [Sunset Longitude Fix](/en/guides/days-work/sunset-lon/) | ±45 min around sunset | Quick longitude check from timing of sunset | Optional |
-| [PM Twilight Star Fix](/en/guides/days-work/pm-stars/) | Sunset → Dusk | Best accuracy — resets the DR for the night | Optional |
+| [AM Twilight Star Fix](/en/guides/days-work/am-stars/) | Dawn → Sunrise | Stars tab → LOPs → Compute Fix → Save Fix | Optional |
+| [Sunrise Longitude Fix](/en/guides/days-work/sunrise-lon/) | Sunrise ±10 min | Sun sight at Hs ≈ 0° (**RISE**) → Save to Log | Optional |
+| [AM Sun Sight](/en/guides/days-work/am-sun/) | Sunrise → Noon window | Sun tab morning sight (**AM**) — keep for Sun-Run Fix | **Yes** |
+| [Noon Sight](/en/guides/days-work/noon/) | LAN ±15 min | Highest **NOON** sight → Compute Lat/Lon → Save to Log | **Yes** |
+| [PM Sun Sight / Running Fix](/en/guides/days-work/pm-sun/) | Noon → Sunset | PM sight, then select AM+PM → Compute Running Fix | **Yes** |
+| [Sunset Longitude Fix](/en/guides/days-work/sunset-lon/) | Sunset ±10 min | Sun sight at Hs ≈ 0° (**SET**) → Save to Log | Optional |
+| [PM Twilight Star Fix](/en/guides/days-work/pm-stars/) | Sunset → Dusk | Stars tab → LOPs → Compute Fix → Save Fix | Optional |
+
+The schedule also lists **Sun-Run Fix** as its own checklist row (after PM Sun Sight) and an optional **Night Fix** after dusk.
 
 ---
 
-## How They Fit Together
+## How they fit together in FairWinds
 
-The three required steps give you the classic **noon running fix**:
+**Daytime sun path**
 
-1. Take the AM sun sight (~2 hours after sunrise)
-2. Sail to noon, tracking your run
-3. Take the noon meridian passage (latitude)
-4. Advance the morning LOP forward by your run → it crosses the noon latitude line → **fix**
+1. **AM Sun Sight** — morning LOP
+2. **Noon Sight** — meridian altitude → lat/lon via the Sun Worksheet
+3. **PM Sun Sight** — afternoon LOP
+4. **Sun-Run Fix** — select the AM + PM sights → FairWinds advances the AM LOP by your boat track and crosses it with the PM LOP
 
-The optional twilight star fixes are the most accurate observations of the day. One good star fix at dawn or dusk is worth more than three noon running fixes — it doesn't depend on any prior DR and can snap you back if you've been off course.
+That is **sun-run-sun**, not “advance the morning line to noon latitude.” Noon is its own Save to Log fix; the running fix is AM↔PM.
+
+**Twilight path**
+
+Dawn and dusk star fixes are independent of the sun chain. One good multi-star fix can reset a drifted DR completely.
+
+Saved fixes and lon/noon/sun-run marks show in the race viewer **Positions** panel — use them as the start of your next DR.
 
 ---
 
-## Why DR Depends on This
+## Workbook cheat sheet
 
-Your DR is only as good as its starting point. Each fix resets that starting point. Without daily observations your DR accumulates error fast — a few days of overcast can put you 50+ miles off.
+| Tab | Use for |
+|---|---|
+| **Sun** | Sun Sights, badges (**AM** / **PM** / **NOON** / **RISE** / **SET**), Sun Worksheet |
+| **Stars** | Star sights, Saved LOPs, Compute Fix |
+| **Fixes** | Enter Fix / Enter DR (especially Expert mode) |
 
-The Day's Work is how you keep that error bounded.
+[The Sky Tool — full guide →](/en/guides/sky-tool/) · [Guided vs Expert →](/en/guides/navigation-modes/)
 
 ---
 

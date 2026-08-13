@@ -11,6 +11,8 @@ title: Celestial Navigation
   <iframe src="https://www.youtube-nocookie.com/embed/df7-twMqJPo?rel=0&modestbranding=1&iv_load_policy=3" title="Celestial Navigation in FairWinds" allowfullscreen loading="lazy"></iframe>
 </div>
 
+New to cel nav? Start with [The Daily Navigation Cycle](/en/guides/daily-navigation-cycle/) — the simple loop before the detail.
+
 ---
 
 ## Overview
@@ -35,11 +37,11 @@ FairWinds offers two navigation modes — **Guided** (the game does the math) an
 
 ## Daily cycle
 
-Celestial navigation runs on a daily rhythm. The Sky Tool shows the observation windows for your current DR — twilight, sunrise, morning sun, noon, afternoon sun, sunset, and evening twilight — and tracks which ones you've completed.
+In the Sky Tool, open the **Workbook**. **Solar Times** shows Sunrise / Sunset / Mer. Pass. for your position reference; the **Daily Schedule** checklist marks which observation windows you’ve completed (guide only — not a requirement).
 
-Each window has a job: stars give you the most accurate fixes, the sun carries you through the day, and horizon timing checks your longitude. Miss one and you wait until tomorrow.
+Daytime work is mostly on the **Sun** tab (AM / noon / PM / horizon lon, then **Sun-Run Fix**). Twilight work is on the **Stars** tab (LOPs → Compute Fix). Saved marks show up in the race viewer **Positions** panel.
 
-> **If you only do one thing: get a twilight fix.** Dawn and dusk are the only times stars and horizon are visible together. Three stars, twenty minutes, and you know exactly where you are.
+> **If you only do one thing: get a twilight fix.** Dawn and dusk are when stars and horizon are visible together. Two or three stars, reduce to LOPs, compute the fix.
 
 [Daily Fixes — full guide →](/en/guides/days-work/)
 

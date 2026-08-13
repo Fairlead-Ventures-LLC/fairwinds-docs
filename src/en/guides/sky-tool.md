@@ -65,8 +65,14 @@ FairWinds offers two modes that control how much of the math the game does for y
 
 ---
 
-## Daily Fixes
+## Workbook
 
-The Sky Tool includes a daily schedule that guides you through seven observation windows — from twilight star fixes to noon latitude to sunset longitude. Each step shows its UTC window and tracks your progress.
+Tap **Workbook** to open the **Cel Nav Workbook** drawer:
+
+- **Solar Times** — Sunrise, Sunset, and Mer. Pass. for your position reference / AP
+- **Daily Schedule** — checklist of observation windows (optional steps labeled *optional*; never blocks play)
+- Tabs: **Sun** (sun sights + Sun Worksheet), **Stars** (star sights, Saved LOPs, Compute Fix), **Fixes** (Enter Fix / Enter DR)
+
+Sun sights get badges when they fall in special windows: **AM**, **PM**, **NOON**, **RISE**, **SET**. Selecting a sight drives the Sun Worksheet (noon lat/lon, sunrise/sunset longitude, or running fix).
 
 [Daily Fixes — full guide →](/en/guides/days-work/)

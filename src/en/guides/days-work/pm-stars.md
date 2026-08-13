@@ -5,7 +5,7 @@ title: PM Twilight Star Fix
 
 # PM Twilight Star Fix
 
-<p class="lead">The mirror of the dawn star fix. Shoot multiple stars at dusk, reset the DR, and go into the night with a confirmed position.</p>
+<p class="lead">Evening mirror of the dawn star fix — Stars tab, LOPs, Compute Fix, then sail into the night with a reset DR.</p>
 
 ← Back to [Daily Fixes](/en/guides/days-work/)
 
@@ -13,26 +13,27 @@ title: PM Twilight Star Fix
 
 ## When
 
-**Sunset to dusk** — the window when the sky is dark enough to see stars but the horizon is still visible. Civil twilight. Roughly 20–30 minutes.
+**Sunset → civil dusk.** Optional on the Daily Schedule. Same short twilight window as dawn — stars and horizon visible together.
 
-## The Recipe
+If you miss it, FairWinds also offers an optional **Night Fix** later (moon/planets/stars); the in-game horizon stays usable at night.
 
-1. Open the Sky Tool before the stars appear — identify your targets in advance
-2. Shoot 3–4 stars spread around the compass (60°+ separation) — see [Picking Stars for a Fix](star-selection/)
-3. Record each sight with UTC time to the second
-4. Compute a LOP for each
-5. Cross the LOPs for a fix — save it as your end-of-day position
+## In FairWinds (Guided)
 
-## Why
+1. Open the **Sky Tool** → **Workbook** → **Stars** tab as the sky darkens
+2. Take **2–3** sextant sights (altitude **15°–65°**, wide azimuth spread — see [Picking Stars for a Fix](star-selection/))
+3. For each: **LOP** → **Reduce Sight →** → **Save LOP**
+4. Select **2 or 3** Saved LOPs → **Compute Fix (Selected 2–3 LOPs)** → **Save Fix**
 
-Same principle as the dawn star fix — multiple bodies, wide crossing angles, no dependence on any prior DR. The evening fix is your last chance to confirm position before the overnight watch. A navigator who takes a good evening star fix goes to sleep knowing exactly where they are. One who skips it carries the accumulated DR error of the whole day into the night.
+The Daily Schedule checks this step off when a celestial fix mark falls inside the PM twilight window. Use **Positions** in the race viewer to build overnight DRs from that fix.
 
-In practice GGR navigators prize the twilight windows above all other observations. The sun is available all day but gives you one body. Twilight gives you the whole sky.
+## Why it matters
 
-## In FairWinds
+Best chance to end the day with a multi-body fix that does not depend on the sun-run chain. GGR-style practice prizes dusk and dawn for exactly this reason.
 
-Sky Tool → **Star** tab. Shoot 3+ bodies during the PM twilight window. Select the saved LOPs and tap **Fix**. The resulting position resets your DR for overnight.
+## Expert mode
+
+Capture sights → reduce externally → **Fixes** tab → **Enter Fix** → **Star Fix**.
 
 ---
 
-*Optional — but the single most valuable observation you can take.*
+*Optional — often the most valuable observation of the day.*

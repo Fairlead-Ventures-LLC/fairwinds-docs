@@ -5,7 +5,7 @@ title: PM Sun Sight / Running Fix
 
 # PM Sun Sight / Running Fix
 
-<p class="lead">Shoot the sun in the afternoon, then advance your noon latitude forward to get a full afternoon fix.</p>
+<p class="lead">Afternoon sun sight, then Sun-Run Fix — FairWinds advances your AM LOP by the boat track and crosses it with the PM LOP.</p>
 
 ← Back to [Daily Fixes](/en/guides/days-work/)
 
@@ -13,38 +13,50 @@ title: PM Sun Sight / Running Fix
 
 ## When
 
-**Noon to sunset** — ideally 1.5–2 hours after transit, when the sun has moved enough west to give a LOP that crosses the noon latitude at a good angle.
+Two Daily Schedule steps share this afternoon window:
 
-## The Recipe
+| Schedule step | What to do |
+|---|---|
+| **PM Sun Sight** (required) | Take the afternoon sun sight |
+| **Sun-Run Fix** (required) | Select AM + PM sights and compute the running fix |
 
-1. Open the Sky Tool → **Solar** tab
-2. Shoot the sun, recording Hs and UTC time
-3. Compute and save the LOP — it will run roughly north-south (sun now in the west)
-4. Advance your **noon latitude line** forward by your DR run since noon
-5. The advanced noon line crosses the afternoon LOP → **running fix**
+**After the noon window → sunset.** Best practice in the app: **2–4 hours** after the AM sight, with **≥60°** of azimuth change between the two. The engine accepts pairs from about **30 minutes** to **12 hours** apart on the same day.
 
-## Why
+## In FairWinds (Guided)
 
-The afternoon sun sight mirrors the morning one, but now you're running the noon latitude forward instead of the morning LOP. The sun has swung to the west, so its LOP crosses your east-west latitude line at a good angle. This gives you a second full fix of the day — useful to confirm the noon position and catch any current set since midday.
+### 1. Take the PM sight
 
-This also sets up your DR for the rest of the afternoon and the evening twilight watch.
+1. **Sun** tab → **Sextant** → shoot the sun → **Save**
+2. Confirm a **PM** badge on the new **Sun Sights** row
 
-## In FairWinds
+### 2. Compute the Sun-Run Fix
 
-Same as the AM sight — Solar tab, save the LOP. Use the Running Fix tool to advance the noon fix forward and cross it with the afternoon LOP.
+1. Still on the **Sun** tab, check **exactly two** sights (your **AM** and **PM**)
+2. The **Sun Worksheet** shows **Running Fix** with Course / Speed / Elapsed / Run from your boat track between the two sight times
+3. Tap **Compute Running Fix**
+4. Optional: **Plot Running Fix**
+5. Tap **Save to Log**
 
-### How FairWinds computes your Sun-Run-Sun run
+Saved as a **Sun run fix** in **Positions**.
 
-When you compute a running fix from two sun sights, FairWinds uses the DR positions stored with each sight:
+> FairWinds does **not** advance a noon latitude line against a single PM LOP for this step. The product path is **sun-run-sun**: AM LOP advanced by the logged run, crossed with the PM LOP.
 
-1. At sight capture time, each sight stores UTC plus the current DR latitude/longitude.
-2. Running Fix computes the run vector from DR1 -> DR2 (distance and course).
-3. Displayed speed is derived from that interval (`distance / elapsed time`) — effectively the average speed between sights.
+### How the run is calculated
 
-This means the run is **not** based on "initial speed only." It is based on the two DR points attached to the selected sights.
+1. Each sight stores UTC plus the DR/position used at capture
+2. Running Fix builds the run vector between those two attached positions (distance + course)
+3. Displayed speed is `distance / elapsed` for that interval
 
-If you use a constant DR assumption (for example 6 kn), set that in your Positions workflow and keep it consistent between the two sights. Changing DR assumptions later does not rewrite DR values already stored on older sights.
+Changing a DR later does not rewrite DR values already stored on older sights — keep your Positions / AP workflow consistent between the two sights.
+
+## Why it matters
+
+This is your main afternoon full fix when you are working the sun. It confirms the morning work and gives you a fresh position before sunset and evening twilight.
+
+## Expert mode
+
+Auto **Compute Running Fix** is hidden. Reduce both sights externally, advance the AM line by your run, then **Fixes** tab → **Enter Fix** → **Running Fix**.
 
 ---
 
-*Required — gives you an afternoon position and resets the DR for the evening.*
+*Required — afternoon position and DR reset for the evening.*

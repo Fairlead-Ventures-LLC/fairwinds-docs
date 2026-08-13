@@ -5,7 +5,7 @@ title: Noon Sight
 
 # Noon Sight
 
-<p class="lead">Watch the sun reach its highest point. That altitude gives you your latitude directly — no tables needed.</p>
+<p class="lead">Near Local Apparent Noon, pick the highest sun sight — the Sun Worksheet computes noon latitude and longitude.</p>
 
 ← Back to [Daily Fixes](/en/guides/days-work/)
 
@@ -13,26 +13,31 @@ title: Noon Sight
 
 ## When
 
-**±15 minutes around meridian passage** (Local Apparent Noon). The Day's Work panel shows the predicted transit time for your current DR position.
+**LAN ±15 minutes** (Local Apparent Noon / meridian passage).
 
-## The Recipe
+Use **Solar Times → Mer. Pass.** for the predicted time at your current position reference. The Daily Schedule shows this as a required **Noon Sight** window.
 
-1. Start tracking the sun with your sextant a few minutes before predicted transit
-2. Watch the altitude increase, then slow, then begin to fall
-3. Record the **maximum** altitude — that's the meridian altitude (Hmax)
-4. Apply standard corrections (dip, refraction, semi-diameter) to get Ho
-5. Latitude = 90° − Ho + declination (from the almanac for that date)
+## In FairWinds (Guided)
 
-## Why
+1. Open the **Sky Tool** → **Workbook** → watch **Mer. Pass.** under **Solar Times**
+2. In the minutes around LAN, take several quick **Sun** sextant sights — keep the one with the **highest Hs**
+3. Open the **Sun** tab and select the sight with the **NOON** badge
+4. The **Sun Worksheet** shows **Noon Fix**
+5. Tap **Compute Lat/Lon** — FairWinds uses meridian altitude for latitude and LAN timing for longitude
+6. Tap **Save to Log**
 
-At the moment the sun transits your meridian it is due north or south of you. The geometry is perfect for latitude — the sun's altitude at transit directly encodes how far you are from the equator, corrected only for the sun's declination on that date. No assumed position, no intercept, no running fix needed. It is the simplest and most reliable observation in the Day's Work.
+The result saves as a **Noon fix** in **Positions**.
 
-It does **not** give longitude. That's why you combine it with the morning LOP.
+> There is no separate “Noon” tab — noon lives in the **Sun** tab worksheet when a **NOON**-badged sight is selected.
 
-## In FairWinds
+## Why it matters
 
-In the Solar tab, the noon sight tool tracks the sun to its peak and records the maximum altitude. Once confirmed it computes latitude and saves the noon fix to the Positions panel.
+Noon is the clean daytime latitude observation. In FairWinds you also get a longitude estimate from the timing of meridian passage, so a good noon sight can stand alone as a full fix — then you still take AM/PM suns if you want the afternoon Sun-Run Fix.
+
+## Expert mode
+
+Compute buttons are hidden. Reduce the meridian altitude (and LAN time) externally, then **Fixes** tab → **Enter Fix** → **Noon Fix**.
 
 ---
 
-*Required — the most reliable observation of the day.*
+*Required — most reliable daytime latitude observation.*
