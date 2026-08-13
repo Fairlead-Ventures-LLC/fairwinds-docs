@@ -72,11 +72,11 @@ This is the real challenge of offshore celestial navigation, and it is what Expe
 
 ### Sextant instrument effects (Expert only)
 
-Your chosen sextant’s **precision** quantizes marked Hs. Its **drift** maintains a persisted **index error (IE)**. Before a round of sights:
+Your chosen sextant’s **precision** quantizes marked Hs. Its **drift** maintains a persisted **index error (IE)**. You tune **Last IC** once per instrument (sextant picker, or **Check IE** → **Save to sextant**):
 
-1. Sextant mode → **Check IE** → align → **Mark!** → note **IC = −IE**
-2. Take and save sights (Hs includes IE until corrected)
-3. On each sight, **Correct Hs** → enter **IC** (and dip, etc.) → apply to get **Ho**
+1. Measure or type **Last IC** on the instrument
+2. Take and save sights (Hs includes hidden IE; env IC is stamped from Last IC)
+3. **Correct Hs** prefills IC from Last IC — add dip / etc. → apply for **Ho**
 
 Instruments that hold calibration (FairWinds default, C. Plath) keep IE at 0′. Others wander — re-check after long gaps or when switching sextants.
 

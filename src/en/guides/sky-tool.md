@@ -83,15 +83,16 @@ In Expert mode FairWinds acts as your instrument suite: it records raw data; you
 
 #### Measuring index error and applying IC
 
-1. Enter **Sextant** mode → tap **Check IE** (Expert only).
-2. Coincide the two images on the horizon with the drum (no sky body) → **Mark!**
-3. Note the **IE** reading and the suggested **IC = −IE**. This check is not saved as a sight.
-4. Take normal sights (**Acquire** → align → **Mark!** → **Save**). Saved **Hs** is the raw drum reading: it already includes the hidden IE (plus your alignment error), quantized to precision.
-5. On each sight card, open **Correct Hs** (the Hs Correction Worksheet).
-6. Enter **Index correction (IC)** = the value from step 3. Fill other lines (dip, etc.) as needed → apply to write **Ho**.
-7. Copy Hs/Ho, UTC, and AP into your external reduction tool; enter the resulting fix via **Enter Fix** / **Set DR**.
+IC is tuned **on the sextant** (one place), not retyped on every sight.
 
-If you skip Check IE or leave IC at 0, every LOP is shifted by roughly that IE in arcminutes (≈ NM). Re-check IE after long gaps or when you switch to a drifting instrument.
+1. Open the **sextant picker** — each instrument has a **Last IC** field (Expert only), or enter **Sextant** mode → **Check IE**.
+2. For Check IE: coincide the two images on the horizon → **Mark!** → **Save to sextant**. That writes **IC = −IE** into that instrument’s Last IC.
+3. Or type Last IC directly on the picker row.
+4. Take normal sights (**Acquire** → align → **Mark!** → **Save**). Saved **Hs** is the raw drum reading (includes hidden IE + alignment, quantized). The sight’s env IC is stamped from Last IC.
+5. Open **Correct Hs** — IC is prefilled from Last IC. Add dip / other lines as needed → apply to write **Ho**. Applying the worksheet also updates Last IC.
+6. Copy Hs/Ho, UTC, and AP into your external reduction tool; enter the fix via **Enter Fix** / **Set DR**.
+
+If Last IC is wrong or unset, LOPs shift by roughly the residual IE in arcminutes (≈ NM). Re-check after long gaps or when switching to a drifting instrument.
 
 [Navigation Modes — full comparison →](/en/guides/navigation-modes/)
 
