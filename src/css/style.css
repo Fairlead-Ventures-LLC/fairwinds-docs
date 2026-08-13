@@ -367,6 +367,80 @@ figcaption {
   border-radius: 0;
 }
 
+/* Comic language swap (EN page; FR comic for Google Translate / FR browsers) */
+.comic-figure {
+  position: relative;
+}
+
+.comic-lang {
+  display: flex;
+  gap: 0.35rem;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.comic-lang button {
+  appearance: none;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.comic-lang button:hover {
+  border-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+.comic-lang button.is-active,
+.comic-lang button[aria-pressed="true"] {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Daily navigation cycle steps */
+.nav-cycle {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.nav-cycle li {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.nav-cycle li:last-child {
+  border-bottom: none;
+}
+
+.nav-cycle li strong {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.nav-cycle li span {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.nav-cycle li::before {
+  content: none;
+}
+
 /* Standalone Blog */
 body.blog-shell {
   background-color: #fbfcfd;
