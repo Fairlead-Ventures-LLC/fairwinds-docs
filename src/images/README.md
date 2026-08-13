@@ -2,6 +2,14 @@
 
 Place your images here and reference them in your markdown files.
 
+If you paste images from Typora, configure Typora to copy images directly into this folder:
+
+- Typora -> Settings -> Image
+- When Insert Local Images -> Copy image to custom folder
+- Custom folder -> `/Users/alex/sailgame/fairwinds-docs/src/images`
+
+You can also run `npm run images:normalize` to auto-copy local image links into this folder and rewrite links to `/images/...`.
+
 ## Usage
 
 ### Basic Image
