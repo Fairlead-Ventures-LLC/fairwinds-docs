@@ -56,10 +56,42 @@ For the best fix quality, choose bodies whose azimuths are 60–120° apart. Two
 
 ## Navigation Modes
 
-FairWinds offers two modes that control how much of the math the game does for you:
+FairWinds offers two modes that control how much of the math the game does for you. Switch anytime from the **Guided / Expert** badge in the top bar, or from **Settings**.
 
-- **Guided** — FairWinds computes Hc, Zn, intercept, LOPs, and fixes. You focus on taking good sights and learning the workflow.
-- **Expert** — FairWinds records your sight data but hides all computed results. You do the sight reduction externally and enter your fix manually.
+| | Guided | Expert |
+|---|---|---|
+| **Who does the math** | FairWinds computes Hc, Zn, intercept, LOPs, and fixes | You reduce externally and enter the fix manually |
+| **Assumed position** | Boat GPS | Your AP / DR choice (GPS hidden) |
+| **Sky time** | Scrub freely | Locked to real time |
+| **Sextant mag limit** | Yes — dimmer stars are blocked | Same |
+| **Instrument precision & index error** | Ignored | Live — see below |
+| **Altitude corrections (Hs→Ho)** | FairWinds applies them | You enter them (Correct Hs worksheet) |
+| **Sight reduction UI** | Worksheets, Compute Fix, plot | Copy sight data; reduce externally |
+
+### Guided — FairWinds does the math
+
+In Guided mode the sextant still teaches acquire / align / mark, but the instrument catalogue’s **precision** and **drift** do not affect the reading. FairWinds applies the altitude corrections and computes Hc, Zn, intercept, LOPs, and fixes for you. Pick any sextant for flavor and star mag limit; the fix quality is driven by your alignment and LOP geometry.
+
+### Expert — live instrument + chart-table workflow
+
+In Expert mode FairWinds acts as your instrument suite: it records raw data; you apply corrections and reduce the sight.
+
+**Choose a sextant** (picker in the sky UI). Mag limit always applies. In Expert, two more stats matter:
+
+- **Precision** — marked Hs is quantized to that instrument’s least count
+- **Drift** — creates a persisted **index error (IE)** that wanders over time (′/week). Instruments that “hold” (e.g. FairWinds default, C. Plath) stay at IE = 0′; others (Davis, Mark II, Astra) seed and drift
+
+#### Measuring index error and applying IC
+
+1. Enter **Sextant** mode → tap **Check IE** (Expert only).
+2. Coincide the two images on the horizon with the drum (no sky body) → **Mark!**
+3. Note the **IE** reading and the suggested **IC = −IE**. This check is not saved as a sight.
+4. Take normal sights (**Acquire** → align → **Mark!** → **Save**). Saved **Hs** is the raw drum reading: it already includes the hidden IE (plus your alignment error), quantized to precision.
+5. On each sight card, open **Correct Hs** (the Hs Correction Worksheet).
+6. Enter **Index correction (IC)** = the value from step 3. Fill other lines (dip, etc.) as needed → apply to write **Ho**.
+7. Copy Hs/Ho, UTC, and AP into your external reduction tool; enter the resulting fix via **Enter Fix** / **Set DR**.
+
+If you skip Check IE or leave IC at 0, every LOP is shifted by roughly that IE in arcminutes (≈ NM). Re-check IE after long gaps or when you switch to a drifting instrument.
 
 [Navigation Modes — full comparison →](/en/guides/navigation-modes/)
 

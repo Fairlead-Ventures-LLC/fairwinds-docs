@@ -31,7 +31,7 @@ The Sky Tool is your in-game sextant. It lets you observe celestial bodies and c
 
 ![sail-skylink](/Users/alex/sailgame/fairwinds-docs/src/images/sail-skylink.png)
 
-FairWinds offers two navigation modes — **Guided** (the game does the math) and **Expert** (you do the math externally). Both use the same sextant and record the same sight data.
+FairWinds offers two navigation modes — **Guided** (FairWinds applies corrections and does the reduction; instrument precision/IE ignored) and **Expert** (you correct and reduce; live precision and index-error drift). Both use the same sky engine and record enriched sight data.
 
 ![expert](/Users/alex/sailgame/fairwinds-docs/src/images/expert.png)
 

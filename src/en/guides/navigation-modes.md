@@ -13,7 +13,7 @@ title: Navigation Modes
 
 ## Overview
 
-FairWinds offers two navigation modes that control how much of the sight reduction workflow the game handles for you. Both modes use the same sky engine, the same sextant simulation, and record the same enriched sight data — the difference is whether FairWinds computes the answers or you do.
+FairWinds offers two navigation modes that control how much of the sight reduction workflow the game handles for you. Both modes use the same sky engine and record enriched sight data — the difference is whether FairWinds computes the answers or you do, and whether the chosen sextant’s precision and index-error drift affect Hs.
 
 You can switch modes at any time from the **Settings** panel in the Sky Tool, or tap the **Guided / Expert** badge in the top bar. Your choice is saved between sessions.
 
@@ -24,6 +24,9 @@ You can switch modes at any time from the **Settings** panel in the Sky Tool, or
 | Feature | Guided | Expert |
 |---|---|---|
 | **Sextant & sight capture** | Full sextant simulation | Full sextant simulation |
+| **Instrument precision & IE drift** | Ignored | Live — Hs quantized; IE baked in until you apply IC |
+| **Check IE** | — | Measure index error in sextant mode |
+| **Altitude corrections (Hs→Ho)** | FairWinds applies them | Manual on Correct Hs worksheet (enter IC, dip, etc.) |
 | **Sight data recorded** | Hs, UTC, AP, environmental params | Same |
 | **Sky time controls** | Scrub forward/back freely | Locked to real time |
 | **Assumed Position (AP)** | Auto — boat's true GPS | Manual — your choice from the dropdown |
@@ -67,19 +70,32 @@ This means:
 
 This is the real challenge of offshore celestial navigation, and it is what Expert mode is designed to replicate.
 
+### Sextant instrument effects (Expert only)
+
+Your chosen sextant’s **precision** quantizes marked Hs. Its **drift** maintains a persisted **index error (IE)**. Before a round of sights:
+
+1. Sextant mode → **Check IE** → align → **Mark!** → note **IC = −IE**
+2. Take and save sights (Hs includes IE until corrected)
+3. On each sight, **Correct Hs** → enter **IC** (and dip, etc.) → apply to get **Ho**
+
+Instruments that hold calibration (FairWinds default, C. Plath) keep IE at 0′. Others wander — re-check after long gaps or when switching sextants.
+
+Step-by-step with the Sky Tool UI: [The Sky Tool → Navigation Modes](/en/guides/sky-tool/#navigation-modes).
+
 ### What FairWinds provides
 
-- Hs in degrees, minutes, seconds of arc
+- Hs in degrees, minutes, seconds of arc (raw drum reading in Expert)
 - UTC timestamp to the second
 - AP position at the time of the sight (the position you selected — never GPS)
-- Environmental parameters (height of eye, index correction, temperature, pressure)
+- Environmental parameters (height of eye, temperature, pressure)
+- **Check IE** and the **Correct Hs** worksheet for Hs→Ho
 - Solar times table and daily work schedule (based on your AP)
 - Best Bodies panel for target selection
 - One-tap **Copy** button on each sight card — copies body name, Hs, UTC, and AP formatted for pasting into any external reduction tool
 
 ### What you do externally
 
-- Apply dip, refraction, semi-diameter, and parallax corrections to get Ho
+- Measure IE and apply IC (plus dip, refraction, semi-diameter, parallax) to get Ho
 - Look up GHA and declination from the Nautical Almanac
 - Choose an assumed position and compute Hc and Zn (HO-249, HO-229, or a calculator)
 - Calculate the intercept (Ho − Hc) and plot LOPs on a plotting sheet
