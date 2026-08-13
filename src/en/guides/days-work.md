@@ -19,17 +19,17 @@ The goal by end of day: a confirmed position fix good enough to reset your DR an
 
 ---
 
-## The Seven Steps
+## Types of fixes
 
 | Step | Window | Purpose | Required |
 |---|---|---|---|
-| [AM Twilight Star Fix](days-work/am-stars/) | Dawn → Sunrise | Best accuracy — multiple bodies, wide crossing angles | Optional |
-| [Sunrise Longitude Fix](days-work/sunrise-lon/) | ±45 min around sunrise | Quick longitude check from timing of sunrise | Optional |
-| [AM Sun Sight](days-work/am-sun/) | Sunrise → Noon | Morning LOP for the noon running fix | **Yes** |
-| [Noon Sight](days-work/noon/) | ±15 min around transit | Latitude directly from meridian passage | **Yes** |
-| [PM Sun Sight / Running Fix](days-work/pm-sun/) | Noon → Sunset | Afternoon LOP; cross with noon for an afternoon fix | **Yes** |
-| [Sunset Longitude Fix](days-work/sunset-lon/) | ±45 min around sunset | Quick longitude check from timing of sunset | Optional |
-| [PM Twilight Star Fix](days-work/pm-stars/) | Sunset → Dusk | Best accuracy — resets the DR for the night | Optional |
+| [AM Twilight Star Fix](/en/guides/days-work/am-stars/) | Dawn → Sunrise | Best accuracy — multiple bodies, wide crossing angles | Optional |
+| [Sunrise Longitude Fix](/en/guides/days-work/sunrise-lon/) | ±45 min around sunrise | Quick longitude check from timing of sunrise | Optional |
+| [AM Sun Sight](/en/guides/days-work/am-sun/) | Sunrise → Noon | Morning LOP for the noon running fix | **Yes** |
+| [Noon Sight](/en/guides/days-work/noon/) | ±15 min around transit | Latitude directly from meridian passage | **Yes** |
+| [PM Sun Sight / Running Fix](/en/guides/days-work/pm-sun/) | Noon → Sunset | Afternoon LOP; cross with noon for an afternoon fix | **Yes** |
+| [Sunset Longitude Fix](/en/guides/days-work/sunset-lon/) | ±45 min around sunset | Quick longitude check from timing of sunset | Optional |
+| [PM Twilight Star Fix](/en/guides/days-work/pm-stars/) | Sunset → Dusk | Best accuracy — resets the DR for the night | Optional |
 
 ---
 
@@ -56,11 +56,11 @@ The Day's Work is how you keep that error bounded.
 
 ## Step-by-step guides
 
-- [AM Twilight Star Fix](days-work/am-stars/)
-- [Sunrise Longitude Fix](days-work/sunrise-lon/)
-- [AM Sun Sight](days-work/am-sun/)
-- [Noon Sight](days-work/noon/)
-- [PM Sun Sight / Running Fix](days-work/pm-sun/)
-- [Sunset Longitude Fix](days-work/sunset-lon/)
-- [PM Twilight Star Fix](days-work/pm-stars/)
-- [Picking Stars for a Fix](days-work/star-selection/)
+- [AM Twilight Star Fix](/en/guides/days-work/am-stars/)
+- [Sunrise Longitude Fix](/en/guides/days-work/sunrise-lon/)
+- [AM Sun Sight](/en/guides/days-work/am-sun/)
+- [Noon Sight](/en/guides/days-work/noon/)
+- [PM Sun Sight / Running Fix](/en/guides/days-work/pm-sun/)
+- [Sunset Longitude Fix](/en/guides/days-work/sunset-lon/)
+- [PM Twilight Star Fix](/en/guides/days-work/pm-stars/)
+- [Picking Stars for a Fix](/en/guides/days-work/star-selection/)

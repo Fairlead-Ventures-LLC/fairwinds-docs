@@ -8,7 +8,7 @@ title: Celestial Navigation
 <p class="lead">Navigate by the stars, sun, and moon — no GPS required.</p>
 
 <div class="video-embed">
-  <iframe src="https://www.youtube.com/embed/df7-twMqJPo" title="Celestial Navigation in FairWinds" allowfullscreen loading="lazy"></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/df7-twMqJPo?rel=0&modestbranding=1&iv_load_policy=3" title="Celestial Navigation in FairWinds" allowfullscreen loading="lazy"></iframe>
 </div>
 
 ---
@@ -27,7 +27,35 @@ The Sky Tool is your in-game sextant. It lets you observe celestial bodies and c
 
 FairWinds offers two navigation modes — **Guided** (the game does the math) and **Expert** (you do the math externally). Both use the same sextant and record the same sight data.
 
+[The Sky Tool — full guide →](/en/guides/sky-tool/)
+
 [Navigation Modes — Guided vs Expert →](/en/guides/navigation-modes/)
+
+---
+
+## Daily cycle
+
+Celestial navigation runs on a daily rhythm. The Sky Tool shows the observation windows for your current DR — twilight, sunrise, morning sun, noon, afternoon sun, sunset, and evening twilight — and tracks which ones you've completed.
+
+Each window has a job: stars give you the most accurate fixes, the sun carries you through the day, and horizon timing checks your longitude. Miss one and you wait until tomorrow.
+
+> **If you only do one thing: get a twilight fix.** Dawn and dusk are the only times stars and horizon are visible together. Three stars, twenty minutes, and you know exactly where you are.
+
+[Daily Fixes — full guide →](/en/guides/days-work/)
+
+### Types of fixes
+
+- [AM Twilight Star Fix](/en/guides/days-work/am-stars/)
+- [Sunrise Longitude Fix](/en/guides/days-work/sunrise-lon/)
+- [AM Sun Sight](/en/guides/days-work/am-sun/)
+- [Noon Sight](/en/guides/days-work/noon/)
+- [PM Sun Sight / Running Fix](/en/guides/days-work/pm-sun/)
+- [Sunset Longitude Fix](/en/guides/days-work/sunset-lon/)
+- [PM Twilight Star Fix](/en/guides/days-work/pm-stars/)
+
+### Reference
+
+- [Picking Stars for a Fix](/en/guides/days-work/star-selection/)
 
 ---
 
@@ -51,27 +79,3 @@ FairWinds has two complementary views:
 
 - **Nav View** — your instrument panel. Heading, speed, apparent wind.
 - **Chart View** — the map. In No GPS mode your fix positions and LOPs appear here. Your true position is hidden until you establish a fix.
-
----
-
-## Daily Fixes
-
-The structured daily observation routine used by GGR navigators. Seven steps — twilight stars, sun sights, noon, and horizon longitude fixes — that together give you a confirmed position every day.
-
-> **If you only do one thing: get a twilight fix.** Dawn and dusk are the only times stars and horizon are visible together. Three stars, twenty minutes, and you know exactly where you are.
-
-[Daily Fixes — full guide →](/en/guides/days-work/)
-
-### The seven steps
-
-- [AM Twilight Star Fix](/en/guides/days-work/am-stars/)
-- [Sunrise Longitude Fix](/en/guides/days-work/sunrise-lon/)
-- [AM Sun Sight](/en/guides/days-work/am-sun/)
-- [Noon Sight](/en/guides/days-work/noon/)
-- [PM Sun Sight / Running Fix](/en/guides/days-work/pm-sun/)
-- [Sunset Longitude Fix](/en/guides/days-work/sunset-lon/)
-- [PM Twilight Star Fix](/en/guides/days-work/pm-stars/)
-
-### Reference
-
-- [Picking Stars for a Fix](/en/guides/days-work/star-selection/)
