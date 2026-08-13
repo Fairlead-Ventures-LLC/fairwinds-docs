@@ -10,9 +10,10 @@ title: Celestial Navigation
 <div class="video-embed">
   <iframe src="https://www.youtube-nocookie.com/embed/df7-twMqJPo?rel=0&modestbranding=1&iv_load_policy=3" title="Celestial Navigation in FairWinds" allowfullscreen loading="lazy"></iframe>
 </div>
+
 New to cel nav? Start with [The Daily Navigation Cycle](/en/guides/daily-navigation-cycle/) — the simple loop before the detail.
 
-![daily-navigation-cycle-6611294](/Users/alex/sailgame/fairwinds-docs/src/images/daily-navigation-cycle-6611294.png)
+![The daily navigation cycle](/images/daily-navigation-cycle-6611294.png)
 
 ---
 
