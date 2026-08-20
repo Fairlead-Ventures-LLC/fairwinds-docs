@@ -20,7 +20,7 @@ Aim for sun altitude about **20°–60°** — high enough to limit refraction t
 ## In FairWinds (Guided)
 
 1. Open the **Sky Tool** → **Workbook** → **Sun** tab
-2. Tap **Sextant**, acquire the sun, align the lower limb to the horizon, **Mark!** → **Save**
+2. Tap **Sextant**, acquire the sun, choose **Center** (default) or **Lower limb**, align to the horizon, **Mark!** → **Save**. Lower limb records a limb Hs; Guided applies +SD so Ho is still the sun’s center.
 3. Confirm the sight appears under **Sun Sights** with an **AM** badge
 4. You do **not** need to compute a standalone fix from this sight alone
 
@@ -34,7 +34,7 @@ In FairWinds the classic daytime position is a **sun-run-sun** fix: advance the 
 
 ## Expert mode
 
-Capture the same sight (Hs is recorded; Ho stays unset until you correct it). Reduce externally; you’ll enter the finished position later via **Enter Fix** → **Running Fix** after the PM sight.
+Capture the same sight (Hs is recorded; Ho stays unset until you correct it). On **Correct Hs**, a lower-limb sun prefills FairWinds SD — apply IC + SD and leave dip / refraction / parallax at 0 to match the engine, or type table values for an almanac reduction. Enter the finished position later via **Enter Fix** → **Running Fix** after the PM sight.
 
 ---
 

@@ -28,8 +28,8 @@ From any race, tap the **Sky** button in the bottom navigation bar. The Sky Tool
 1. **Find a body** — pan the sky or use the **Best Bodies** panel to see which stars, planets, or the sun are well-placed right now.
 2. **Enter sextant mode** — tap the **Sextant** button in the top right to open the sight-taking view.
 3. **Acquire** — center the reticle on your target and lock it.
-4. **Align** — use the drum to bring the body down to the horizon line. For a sun sight, bring the bottom edge of the orange disc (the lower limb) to just touch the top of the blue horizon line. Your alignment accuracy determines the error on your observed altitude (Hs).
-5. **Mark and save** — confirm the sight. It records Hs (in DMS), UTC to the second, your GPS position (Guided mode) or DR position (Expert / No GPS mode), and environmental parameters.
+4. **Align** — use the drum to bring the body down to the horizon. The default aim is the **center** of the object. For the sun or moon you can switch that sight to **Lower limb** and rest the bottom of the disc on the horizon instead. Stars and planets are always center.
+5. **Mark and save** — confirm the sight. It records Hs (in DMS), UTC to the second, and your GPS position (Guided) or AP (Expert). A lower-limb sight stores Hs as the limb reading. Guided adds the printed semi-diameter (+SD) so Ho is the body’s center — the same frame as FairWinds Hc. Expert leaves Ho unset until you apply **Correct Hs** (prefilled with that same SD; leave dip, refraction, and parallax at 0 to match the engine).
 
 ---
 
