@@ -16,12 +16,15 @@ How to join and race the Virtual Golden Globe Race on FairWinds.
 
     To see the round-the-world course, click **Show course map** at the bottom of the [race detail page](https://fairwinds.world/race/2653/detail).
 
-2. Everyone starts at the same time on Sept 6. To hide all the other boats, toggle off the **Boats** button in the tools menu. To choose your position on the start line just click the "A", "B", or "M" buttons. ![Screenshot 2026-08-29 at 11.49.50 AM](/images/Screenshot 2026-08-29 at 11.49.50 AM.png)
+2. Everyone starts at the same time on Sept 6. To hide all the other boats, toggle off the **Boats** button in the tools menu. To choose your position on the start line just click the "A", "B", or "M" buttons.
+
+    ![Boats button in the tools menu](/images/ggr-boats-button.png)
 
 3. Your positions in the [public tracker](https://fairwinds.world/race/2653/tracker) are delayed 24 hours, so worst case you can't get too lost.
 
 4. Waypoints are set up as wide gates. Cross through them in any direction to mark them as complete.
-    ![Screenshot 2026-08-29 at 11.52.39 AM](/images/Screenshot 2026-08-29 at 11.52.39 AM.png)
+
+    ![Wide waypoint gate](/images/ggr-waypoint-gates.png)
 
 5. No routers. No GPS browser hacking. Obvious violations will be cause for forced DNF.
 
