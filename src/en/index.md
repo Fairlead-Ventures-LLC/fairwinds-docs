@@ -8,7 +8,9 @@ title: Getting Started
 
 <p class="lead">New to FairWinds? Here's the fastest way to get sailing.</p>
 
-For an absolute minimum 10-minute crash course (with no actual crashing) - watch the FairWinds Quick Start tutorial: TBA
+For an absolute minimum 10-minute crash course (with no actual crashing) - watch the FairWinds Quick Start tutorial: [Learning the race viewer controls](https://www.youtube.com/watch?v=cGB9l_2dLXE)
+
+Here for the GGR? See the [GGR FAQ](/en/ggr/).
 
 ---
 
