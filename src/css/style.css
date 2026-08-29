@@ -208,6 +208,10 @@ li {
   line-height: 1.6;
 }
 
+.main-content ol > li {
+  margin-bottom: 1.15rem;
+}
+
 li:last-child {
   margin-bottom: 0;
 }
@@ -343,6 +347,44 @@ figcaption {
   color: var(--text-secondary);
   text-align: center;
   margin-top: 0.5rem;
+}
+
+.map-placeholder {
+  margin: 1.5rem 0 2rem;
+}
+
+.map-placeholder-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  background: repeating-linear-gradient(
+    -12deg,
+    var(--bg-secondary),
+    var(--bg-secondary) 12px,
+    #eef1f3 12px,
+    #eef1f3 24px
+  );
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tips-list {
+  margin-left: 1.25rem;
+}
+
+.tips-list > li {
+  margin-bottom: 1.15rem;
+}
+
+.tips-list > li:last-child {
+  margin-bottom: 0;
 }
 
 /* Video embeds (e.g. YouTube) */
