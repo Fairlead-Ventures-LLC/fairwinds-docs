@@ -19,7 +19,7 @@ Otherwise, read on: How to join and race the Virtual Golden Globe Race on FairWi
 
     To see the round-the-world course, click **Show course map** at the bottom of the [race detail page](https://fairwinds.world/race/2653/detail).
 
-2. **Why can't I zoom out**? In cel nav races, you cannot zoom out to see your exact position. The idea is you have access to to the sam information as the real sailors, with a ~20nm view of the wind and waves around you. You need to use the 'Chart' view to plot your fix and figure out your course.
+2. **Why can't I zoom out**? Unlike other router-based virtual races, in celestial nav races, you cannot zoom out to see your exact position. The idea is you have access to to the same information as the real sailors, with a ~20nm view of the wind and waves around you. <u>You need to use the 'Chart' view to plot your fix and figure out your course</u>.
 
 3. Everyone starts at the same time on Sept 6. To hide all the other boats, toggle off the **Boats** button in the tools menu. To choose your position on the start line just click the "A", "B", or "M" buttons.
 
