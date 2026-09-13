@@ -6,7 +6,7 @@ title: Rankings and Scoring
 
 # Rankings and Scoring
 
-<p class="lead">FairWinds Ranking scores every finish with a simple formula, then builds Season championships and a rolling World Ranking from official series. Per-series discards apply in both — so the races that count in a series are the same ones that count toward World.</p>
+<p class="lead">FairWinds Ranking scores every finish with a simple formula, then builds Season championships and a World Ranking from official series. Per-series discards apply in both — so the races that count in a series are the same ones that count toward World.</p>
 
 Live standings: [fairwinds.world/results/rankings](https://fairwinds.world/results/rankings)
 
@@ -31,11 +31,9 @@ A DNS is cheap in Rankings (zero) but expensive in series low-point scoring. Dis
 | View | What it covers | Window |
 |------|----------------|--------|
 | **Season** | Official series assigned to a championship season | That season's calendar |
-| **World Ranking** | All official series | Rolling **12 months** |
+| **World Ranking** | All official series | Races starting **1 September 2026** onward |
 
 Both use the same points formula, the same Gold / Silver / Bronze tiers, and the same per-series discard rules. World Ranking also requires **more than one** actual start (finish or DNF) to appear — auto-filled DNS does not unlock a World listing by itself.
-
-World Ranking is currently in **BETA**. All world ranking will be reset and restart **1 September 2026**.
 
 Individual and team tables are available for both views. Team points are the sum of member boat points earned while racing under that team.
 
@@ -170,12 +168,15 @@ Best **3** boats per race; team needs at least **3** boats to qualify; same disc
 
 ---
 
-## Design Intent (Short)
+## Mixed Crew
 
-- **Series / Season** — shared calendar → discards are fair.
-- **World** — inherits those series decisions; does not invent a second “best races of the year” list.
-- Racing Gold-only is a valid specialization. Skipping a hard series simply means you do not earn those points.
-- Anti-grind comes from honest EventGrade and series structure, not from a buffet-style top-N over hundreds of events.
+A race can accept **solo, double, and crewed** entries in the same fleet. That is a participation option, not a scoring division.
+
+- Official place is still overall `finishPosition`, plus existing class rank by polar when the race has more than one boat class.
+- Viewer / results / tracker filters hide other crew types but **do not re-rank**. A solo in 7th is still 7th after you filter to Solo.
+- Series, Season, and World Ranking keep using that same overall place. There is no solo trophy inside a mixed race.
+
+This matches how multi-class already works: filter chips and badges, one points table.
 
 ---
 
