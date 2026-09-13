@@ -26,6 +26,7 @@ title: Overview
 
 - [Getting Started](/en/) — quickstart guide
 - [Avoid the Rocks](/en/guides/avoid-rocks/) — crash detection and safe navigation
+- [Race Alerts](/en/guides/race-alerts/) — email and Discord notices for crash, start, finish, VMG, and gates
 - [Rhumb vs Great Circle](/en/guides/rhumb-vs-great-circle/) — understanding routing geometry
 - [Routing - How It Works](/en/routing/how-it-works/) — how routing works in FairWinds
 - [Currents](/en/currents/part-1-primer/) — sailing with ocean currents
