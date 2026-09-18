@@ -60,7 +60,7 @@ Saved fixes and lon/noon/sun-run marks show in the race viewer **Positions** pan
 | **Stars** | Star sights, Saved LOPs, Compute Fix |
 | **Fixes** | Enter Fix / Enter DR (especially Expert mode) |
 
-[The Sky Tool — full guide →](/en/guides/sky-tool/) · [Guided vs Expert →](/en/guides/navigation-modes/)
+[The Sky Tool — full guide →](/en/guides/sky-tool/) · [Guided vs Expert →](/en/guides/navigation-modes/) · [Expert setup →](/en/guides/navigation-modes/#expert-setup)
 
 ---
 

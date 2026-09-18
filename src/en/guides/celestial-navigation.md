@@ -33,6 +33,8 @@ The Sky Tool is your in-game sextant. It lets you observe celestial bodies and c
 
 FairWinds offers two navigation modes — **Guided** (FairWinds applies corrections and does the reduction; instrument precision/IE ignored) and **Expert** (you correct and reduce; live precision and index-error drift). Both use the same sky engine and record enriched sight data.
 
+Expert in seven steps: switch to Expert → set AP → Check IE (save Last IC) → take the sight → Correct Hs (IC + SD only) → reduce outside FairWinds → Enter Fix. Full list: [Navigation Modes → Expert setup](/en/guides/navigation-modes/#expert-setup).
+
 ![expert](/Users/alex/sailgame/fairwinds-docs/src/images/expert.png)
 
 [The Sky Tool — full guide →](/en/guides/sky-tool/)

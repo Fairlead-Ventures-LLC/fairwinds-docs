@@ -34,7 +34,7 @@ In FairWinds the classic daytime position is a **sun-run-sun** fix: advance the 
 
 ## Expert mode
 
-Capture the same sight (Hs is recorded; Ho stays unset until you correct it). On **Correct Hs**, a lower-limb sun prefills FairWinds SD — apply IC + SD and leave dip / refraction / parallax at 0 to match the engine, or type table values for an almanac reduction. Enter the finished position later via **Enter Fix** → **Running Fix** after the PM sight.
+Capture the same sight (Hs is recorded; Ho stays unset until you correct it). Follow [Expert setup](/en/guides/navigation-modes/#expert-setup): on **Correct Hs**, a lower-limb sun prefills FairWinds SD — apply IC + SD and leave dip / refraction / parallax at 0. Enter the finished position later via **Enter Fix** → **Running Fix** after the PM sight.
 
 ---
 

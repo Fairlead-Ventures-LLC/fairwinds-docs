@@ -65,7 +65,7 @@ FairWinds offers two modes that control how much of the math the game does for y
 | **Sky time** | Scrub freely | Locked to real time |
 | **Sextant mag limit** | Yes — dimmer stars are blocked | Same |
 | **Instrument precision & index error** | Ignored | Live — see below |
-| **Altitude corrections (Hs→Ho)** | FairWinds applies them | You enter them (Correct Hs worksheet) |
+| **Altitude corrections (Hs→Ho)** | FairWinds applies them | You enter them on Correct Hs (IC + SD; leave dip / refraction / parallax at 0) |
 | **Sight reduction UI** | Worksheets, Compute Fix, plot | Copy sight data; reduce externally |
 
 ### Guided — FairWinds does the math
@@ -81,18 +81,19 @@ In Expert mode FairWinds acts as your instrument suite: it records raw data; you
 - **Precision** — marked Hs is quantized to that instrument’s least count
 - **Drift** — creates a persisted **index error (IE)** that wanders over time (′/week). Instruments that “hold” (e.g. FairWinds default, C. Plath) stay at IE = 0′; others (Davis, Mark II, Astra) seed and drift
 
-#### Measuring index error and applying IC
+#### Expert setup
 
-IC is tuned **on the sextant** (one place), not retyped on every sight.
+1. Switch the Sky Tool to **Expert**. Pick your sextant.
+2. Set **AP** (last fix or DR). GPS stays hidden.
+3. **Check IE** — coincide the two images, **Mark!**, **Save to sextant**. That stores **IC = −IE** as Last IC for that instrument. Skip if this sextant already holds calibration. You can also type Last IC on the picker row.
+4. Take the sight: Acquire → bring the body to the horizon (center, or **Lower limb** for sun/moon) → **Mark!** → **Save**. Hs is the raw drum reading (hidden IE + alignment, quantized).
+5. **Correct Hs:** IC is prefilled from Last IC. Add **+SD** only if it was lower limb. Leave dip, refraction, and parallax at **0**. Apply → that writes **Ho** (and updates Last IC).
+6. Reduce outside FairWinds: almanac GHA/Dec → Hc and Zn from your AP → intercept **Ho − Hc** → plot LOPs → fix.
+7. **Enter Fix** / **Set DR** with that position. That becomes the AP for the next sights.
 
-1. Open the **sextant picker** — each instrument has a **Last IC** field (Expert only), or enter **Sextant** mode → **Check IE**.
-2. For Check IE: coincide the two images on the horizon → **Mark!** → **Save to sextant**. That writes **IC = −IE** into that instrument’s Last IC.
-3. Or type Last IC directly on the picker row.
-4. Take normal sights (**Acquire** → align → **Mark!** → **Save**). Saved **Hs** is the raw drum reading (includes hidden IE + alignment, quantized). The sight’s env IC is stamped from Last IC.
-5. Open **Correct Hs** — IC is prefilled from Last IC. Add dip / other lines as needed → apply to write **Ho**. Applying the worksheet also updates Last IC.
-6. Copy Hs/Ho, UTC, and AP into your external reduction tool; enter the fix via **Enter Fix** / **Set DR**.
+Copy the sight card (body, Hs/Ho, UTC, AP) if you are reducing in another tool. Re-check IE after a long gap or when you switch to a drifting sextant. If Last IC is wrong or unset, LOPs shift by roughly the residual IE in arcminutes (≈ NM).
 
-If Last IC is wrong or unset, LOPs shift by roughly the residual IE in arcminutes (≈ NM). Re-check after long gaps or when switching to a drifting instrument.
+Height of eye is stamped at **3 m**; that does not turn dip on. Leave dip at 0 to match engine Hc.
 
 [Navigation Modes — full comparison →](/en/guides/navigation-modes/)
 

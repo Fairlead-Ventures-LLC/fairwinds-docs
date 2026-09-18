@@ -32,7 +32,7 @@ Best chance to end the day with a multi-body fix that does not depend on the sun
 
 ## Expert mode
 
-Capture sights → reduce externally → **Fixes** tab → **Enter Fix** → **Star Fix**.
+Capture sights → follow [Expert setup](/en/guides/navigation-modes/#expert-setup) → **Fixes** tab → **Enter Fix** → **Star Fix**.
 
 ---
 

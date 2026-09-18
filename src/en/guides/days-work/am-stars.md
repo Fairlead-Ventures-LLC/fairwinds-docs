@@ -39,7 +39,7 @@ A multi-star fix does not depend on a prior sun line or a long DR advance. If yo
 
 ## Expert mode
 
-Same sights, but there is no **LOP** / **Compute Fix** path. Correct Hs as needed, reduce externally, then use the **Fixes** tab → **Enter Fix** (type **Star Fix**).
+Same sights, but there is no **LOP** / **Compute Fix** path. Follow [Expert setup](/en/guides/navigation-modes/#expert-setup): Correct Hs (IC + SD), reduce externally, then **Fixes** tab → **Enter Fix** (type **Star Fix**).
 
 ---
 
