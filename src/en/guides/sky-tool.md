@@ -29,7 +29,7 @@ From any race, tap the **Sky** button in the bottom navigation bar. The Sky Tool
 2. **Enter sextant mode** — tap the **Sextant** button in the top right to open the sight-taking view.
 3. **Acquire** — center the reticle on your target and lock it.
 4. **Align** — use the drum to bring the body down to the horizon. The default aim is the **center** of the object. For the sun or moon you can switch that sight to **Lower limb** and rest the bottom of the disc on the horizon instead. Stars and planets are always center.
-5. **Mark and save** — confirm the sight. It records Hs (in DMS), UTC to the second, and your GPS position (Guided) or AP (Expert). A lower-limb sight stores Hs as the limb reading. Guided adds the printed semi-diameter (+SD) so Ho is the body’s center — the same frame as FairWinds Hc. Expert leaves Ho unset until you apply **Correct Hs** (prefilled with that same SD; leave dip, refraction, and parallax at 0 to match the engine).
+5. **Mark and save** — confirm the sight. It records Hs (in DMS), UTC to the second, and your GPS position (Guided) or AP (Expert). Like a real sextant reading, Hs includes atmospheric refraction, because the sky is drawn with it. A lower-limb sight stores Hs as the limb reading. Guided adds the printed semi-diameter (+SD) and removes the refraction the sky applied, so Ho is the geometric altitude of the body’s center — the same frame as FairWinds Hc and the almanac. Expert leaves Ho unset until you apply **Correct Hs** (refraction and SD prefilled; you add parallax and leave dip at 0). See [Altitude corrections and refraction](/en/guides/navigation-modes/#altitude-corrections-and-refraction).
 
 ---
 
@@ -65,12 +65,12 @@ FairWinds offers two modes that control how much of the math the game does for y
 | **Sky time** | Scrub freely | Locked to real time |
 | **Sextant mag limit** | Yes — dimmer stars are blocked | Same |
 | **Instrument precision & index error** | Ignored | Live — see below |
-| **Altitude corrections (Hs→Ho)** | FairWinds applies them | You enter them on Correct Hs (IC + SD; leave dip / refraction / parallax at 0) |
+| **Altitude corrections (Hs→Ho)** | FairWinds applies them (refraction, +SD for lower limb) | You enter them on Correct Hs (IC, refraction, +SD, parallax; dip stays 0) |
 | **Sight reduction UI** | Worksheets, Compute Fix, plot | Copy sight data; reduce externally |
 
 ### Guided — FairWinds does the math
 
-In Guided mode the sextant still teaches acquire / align / mark, but the instrument catalogue’s **precision** and **drift** do not affect the reading. FairWinds applies the altitude corrections and computes Hc, Zn, intercept, LOPs, and fixes for you. Pick any sextant for flavor and star mag limit; the fix quality is driven by your alignment and LOP geometry.
+In Guided mode the sextant still teaches acquire / align / mark, but the instrument catalogue’s **precision** and **drift** do not affect the reading. FairWinds applies the altitude corrections (removing refraction, adding SD for a lower limb) and computes Hc, Zn, intercept, LOPs, and fixes for you. The Sight Reduction Form shows each line, including **Refraction**. Pick any sextant for flavor and star mag limit; the fix quality is driven by your alignment and LOP geometry.
 
 ### Expert — live instrument + chart-table workflow
 
@@ -87,13 +87,15 @@ In Expert mode FairWinds acts as your instrument suite: it records raw data; you
 2. Set **AP** (last fix or DR). GPS stays hidden.
 3. **Check IE** — coincide the two images, **Mark!**, **Save to sextant**. That stores **IC = −IE** as Last IC for that instrument. Skip if this sextant already holds calibration. You can also type Last IC on the picker row.
 4. Take the sight: Acquire → bring the body to the horizon (center, or **Lower limb** for sun/moon) → **Mark!** → **Save**. Hs is the raw drum reading (hidden IE + alignment, quantized).
-5. **Correct Hs:** IC is prefilled from Last IC. Add **+SD** only if it was lower limb. Leave dip, refraction, and parallax at **0**. Apply → that writes **Ho** (and updates Last IC).
+5. **Correct Hs:** IC is prefilled from Last IC. **Refraction** is prefilled with the FairWinds value (keep it, or enter your almanac figure). Add **+SD** only if it was lower limb, and **parallax** (sun about +0.1′, moon from HP). Leave dip at **0**. Apply → that writes **Ho** (and updates Last IC).
 6. Reduce outside FairWinds: almanac GHA/Dec → Hc and Zn from your AP → intercept **Ho − Hc** → plot LOPs → fix.
 7. **Enter Fix** / **Set DR** with that position. That becomes the AP for the next sights.
 
 Copy the sight card (body, Hs/Ho, UTC, AP) if you are reducing in another tool. Re-check IE after a long gap or when you switch to a drifting sextant. If Last IC is wrong or unset, LOPs shift by roughly the residual IE in arcminutes (≈ NM).
 
-Height of eye is stamped at **3 m**; that does not turn dip on. Leave dip at 0 to match engine Hc.
+Height of eye is stamped at **3 m**; that does not turn dip on. Leave dip at 0: the sky horizon is the horizon from a height of eye of zero.
+
+Why these corrections, and how the sky’s refraction compares with a real one: [Altitude corrections and refraction](/en/guides/navigation-modes/#altitude-corrections-and-refraction).
 
 [Navigation Modes — full comparison →](/en/guides/navigation-modes/)
 

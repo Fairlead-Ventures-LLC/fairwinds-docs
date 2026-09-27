@@ -22,7 +22,7 @@ Use **Solar Times → Sunset** as your cue. Optional step — easy to combine wi
 1. Open the **Sky Tool** → note Sunset under **Solar Times**
 2. Near sunset, **Sextant** the **Sun** with the disc **half-submerged** (Hs ≈ 0°)
 3. **Sun** tab → select the sight with the **SET** badge
-4. **Sun Worksheet** shows **Sunrise / Sunset Fix**
+4. **Sun Worksheet** shows **Sunrise / Sunset Fix**: sun declination and GHA from the sky engine, **Hs**, **Refraction** (about 34′), **Ho**, the hour angle, and your longitude — a chronometer sight, as described on [Sunrise Longitude Fix](/en/guides/days-work/sunrise-lon/)
 5. Tap **Save to Log**
 
 Appears in **Positions** as a **Lon fix**. Compare it with your sunrise longitude if you took one — the difference is a quick read on how well your DR held through the day.
@@ -33,7 +33,7 @@ A fast end-of-day longitude check before twilight. It will not replace a star fi
 
 ## Expert mode
 
-Same capture; compute longitude offline from observed UTC vs Greenwich sunset (**1 min ≈ 0.25°**), then **Enter Fix** → **Longitude Fix**.
+Same capture and the same chronometer sight as [sunrise](/en/guides/days-work/sunrise-lon/#expert-mode), with one change: at sunset the sun is west of you, so **LHA = t** (not 360° − t). Correct Hs first (IC, prefilled refraction of about −34′, parallax +0.1′; dip stays 0), then **Longitude = LHA − GHA**. Enter it with **Enter Fix** → **Longitude Fix**.
 
 ---
 
