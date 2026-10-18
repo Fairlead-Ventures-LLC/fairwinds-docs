@@ -31,7 +31,13 @@ Check **Solar Times → Sunrise** for the predicted UTC (based on your position 
 
 The fix is saved as a **Lon fix** and appears in **Positions**.
 
-The latitude used comes from your position reference / AP, so a good noon or star latitude makes this longitude better.
+### Where the latitude comes from
+
+The hour-angle solution needs a latitude, and it takes it from the position stamped on the sight — whatever **Reference from / AP Selection** resolved to when you saved. GPS (Guided) or a projected DR mark gives today's latitude; **Auto — Latest fix** or a specific fix gives the latitude of that fix, wherever you have sailed since. Any error in that latitude comes straight through as longitude error (its size depends on the sun's bearing at rising; it grows as the sun rises further from due east). A good twilight star fix or a fresh DR mark just before dawn is what makes this sight worth taking. Details: [Position reference, DR and the run](/en/guides/days-work/#position-reference-dr-and-the-run).
+
+### Timing
+
+Because the sun is under 5° there is no alignment step: **Acquire** is the mark, and Hs, UTC, Hc and Zn are all taken at that instant, however long you leave the result card up. Near the horizon the sun moves about 1′ every four seconds, so run the sky clock in **1s** mode and acquire as the center crosses the horizon.
 
 ## Why it matters
 

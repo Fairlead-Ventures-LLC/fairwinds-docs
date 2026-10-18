@@ -84,6 +84,8 @@ This means:
 - A stale or inaccurate AP will bias your LOPs
 - The error compounds: each fix session's quality depends on how well you maintained DR since the last one
 
+**Auto** resolves to your latest DR mark *advanced along its course and speed* to the current time — but only if that DR is newer than your latest fix. The moment you save a fix, Auto switches to that fix and holds it **still**; it does not know your course or speed until you lay a new DR mark from it. Sights taken hours apart on a held fix all carry the same AP, which makes a sun-run fix's run come out as zero. Lay a DR after every fix. The full table of what each dropdown option resolves to, and what each sun sight does with it, is in [Position reference, DR and the run](/en/guides/days-work/#position-reference-dr-and-the-run).
+
 This is the real challenge of offshore celestial navigation, and it is what Expert mode is designed to replicate.
 
 ### Sextant instrument effects (Expert only)

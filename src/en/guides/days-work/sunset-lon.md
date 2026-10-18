@@ -27,6 +27,8 @@ Use **Solar Times → Sunset** as your cue. Optional step — easy to combine wi
 
 Appears in **Positions** as a **Lon fix**. Compare it with your sunrise longitude if you took one — the difference is a quick read on how well your DR held through the day.
 
+As at sunrise, the latitude for the solution is the one stamped on the sight from your position reference. By sunset this is where a static reference hurts most: a reference still sitting on a morning fix can be a day's run out in latitude, and that error comes through into the longitude. Keep the reference on GPS (Guided) or a projected DR mark, or take the sight right after a noon fix with a new DR laid from it. There is no alignment step under 5°, so **Acquire** is the mark; use the **1s** sky clock. See [Position reference, DR and the run](/en/guides/days-work/#position-reference-dr-and-the-run).
+
 ## Why it matters
 
 A fast end-of-day longitude check before twilight. It will not replace a star fix, but it is cheap insurance on longitude before dark.

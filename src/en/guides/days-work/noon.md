@@ -32,9 +32,23 @@ The result saves as a **Noon fix** in **Positions**.
 
 > There is no separate “Noon” tab — noon lives in the **Sun** tab worksheet when a **NOON**-badged sight is selected.
 
+### What the DR is and isn't used for
+
+The sight is stamped with your position reference like any other, but the noon fix barely uses it: latitude comes from Ho and declination, longitude from the time, and the stamp only decides whether the sun is north or south of you. A stale DR does not hurt a noon fix. (The **NOON** badge and the ±15 min window are judged against meridian passage at the reference, so a reference hundreds of miles off could mis-badge the sight, but it will not shift the result.)
+
+### Timing is the whole game for longitude
+
+Latitude is forgiving: a sight a few minutes off meridian passage is a few tenths of a minute low. Longitude is not. It is computed from the sun's GHA at the sight's UTC, so **every minute of timing error is 15′ of longitude** (15 NM at the equator, 13 NM at 30°, 10 NM at 48°). The trap is that the sun's altitude is almost flat for several minutes either side of transit, so “keep the highest Hs” cannot pin the moment of transit to better than a minute or two. In practice:
+
+- Put the sky clock in **1s** mode before the noon window.
+- Make sure the reference is current (a projected DR, or GPS in Guided) so **Mer. Pass.** is predicted for where you *are*, not where your last fix was. A reference 40 NM behind you on an easterly course predicts LAN about 3 minutes late.
+- Mark **at** the predicted Mer. Pass. time, then bracket it, and prefer the sight closest to the prediction among those within a tenth of a minute of the highest Hs.
+
+Treat the noon longitude as a check rather than a primary longitude. The Sun-Run Fix and the sunrise/sunset chronometer sight both get longitude from steeply changing altitudes and are far less sensitive to the clock.
+
 ## Why it matters
 
-Noon is the clean daytime latitude observation. In FairWinds you also get a longitude estimate from the timing of meridian passage, so a good noon sight can stand alone as a full fix — then you still take AM/PM suns if you want the afternoon Sun-Run Fix.
+Noon is the clean daytime latitude observation. In FairWinds you also get a longitude estimate from the timing of meridian passage, so a well-timed noon sight can stand alone as a full fix — then you still take AM/PM suns if you want the afternoon Sun-Run Fix.
 
 ## Expert mode
 
