@@ -31,14 +31,16 @@ You can really see this illustrated in the Southern Ocean, with waves overlaid o
 
 ## Data Source
 
-Wave data comes from the **NOAA GFS Wave model** (global, 0.25° resolution), the same wave forecast system used by professional offshore routing tools. Two fields are fetched for every forecast cycle:
+Wave data comes from the **NOAA GFS Wave model** (global, 0.50° resolution), the same wave forecast system used by professional offshore routing tools. Two fields are fetched from each forecast run (240 hours of forecast):
 
 | Parameter | GRIB2 code | What it is |
 |-----------|-----------|------------|
 | Significant wave height | `HTSGW` | The average height (trough to crest) of the largest third of waves, in metres |
 | Primary wave direction  | `DIRPW` | The direction the dominant wave train is **travelling toward** (oceanographic convention — opposite of how wind direction is reported) |
 
-Both fields are fetched four times a day alongside the wind GRIBs and pushed to the simulator and router-service. FairWinds interpolates both fields to your exact position and time using bilinear spatial interpolation and linear time interpolation between forecast steps, so the wave state under your boat updates smoothly as you sail and as new forecast cycles arrive.
+Unlike wind, waves update **once per day**. A new wave forecast goes live at **06:00 UTC** each day. Until then, you're sailing on the previous day's forecast. When the new run arrives, expect wave heights and directions to shift — wave forecasts can change meaningfully from one day to the next. See [Weather Cycles](/en/weather-cycles/) for the full schedule.
+
+FairWinds interpolates both fields to your exact position and time using bilinear spatial interpolation and linear time interpolation between forecast steps, so the wave state under your boat updates smoothly as you sail and when the daily run switches over.
 
 The current wave data is always viewable on [fairwinds.world/wind](https://fairwinds.world/wind).
 
