@@ -30,7 +30,7 @@ SMS is not offered yet.
 | Alert (profile name) | Who | When it fires |
 |---|---|---|
 | **Boat crash (runs aground)** | Everyone | Your boat hits land |
-| **15 minute race start reminder** | Everyone | Once, shortly before a scheduled start |
+| **Race start reminders (1 hour and 15 minutes)** | Everyone | Twice: one hour before a scheduled start, then again at 15 minutes |
 | **Race finish** | Everyone | Your boat crosses the finish |
 | **Sailing below VMG (5+ minutes)** | Pro | Pinch, too-deep, or irons for several minutes |
 | **Approaching next gate** | Pro | You enter the distance you set to the next gate |
@@ -54,9 +54,9 @@ Rules:
 
 ## Race start reminder
 
-You get **one** reminder for a scheduled (not perpetual) race, while the race is **active** and the start is still in the future. The profile lists this as a **15-minute** reminder.
+You get **two** reminders for a scheduled (not perpetual) race, while the race is **active** and the start is still in the future: one at **1 hour**, then one at **15 minutes**. Both use the same profile switch. Each message states how many minutes are left.
 
-No reminder if the race has already started, or if you only join after that window.
+No reminder if the race has already started. If you only join inside the last 15 minutes, you get that notice and not the one-hour notice.
 
 ---
 

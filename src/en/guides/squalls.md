@@ -26,12 +26,25 @@ Because the cell adds to the wind rather than simply scaling it, it can speed th
 
 | Where you are | What you feel |
 |---|---|
+| Just ahead of the cloud | A lull and a pull toward the cell as the inflow band draws air in, then the gust front |
 | Ahead of the squall | A short, fast ride. The outflow adds to the trade |
 | To one side | Moderately stronger wind, with a clear shift one way |
 | To the other side | A shift the opposite way |
 | Behind the squall | Light, fluky air. The outflow cancels the trade |
 
 The shifts, the gust front and the hole behind the cell all come naturally from this. They are not scripted.
+
+### The inflow band ahead of the cloud
+
+A real squall is fed by warm, moist air drawn in at the surface just in front of it. The cold outflow wedges under that air and lifts it, which keeps the updraft going. FairWinds models this as a **thin band of inflow hugging the leading edge** of the cell, on the side it is moving toward.
+
+- **On approach** the wind eases and bends toward the cell. This is the lull sailors learn to watch for.
+- **At the gust front** the inflow meets the outflow, and the wind changes sharply.
+- **It follows the cloud's edge**, so it curves round the front of the cell rather than sitting out ahead as a separate patch. It fades out round the flanks, and there is none behind the cell.
+- **It runs for most of the cell's life**, from the gust front through the mature stage, and fades with the outflow.
+- **Beyond the front the outflow stops** on the leading side. Behind and to the sides the outflow keeps its full reach.
+
+A cell with no track has no leading side, so it has no inflow band.
 
 ---
 
@@ -42,8 +55,8 @@ Every squall passes through the same stages:
 | Stage | What happens |
 |---|---|
 | Growing | Air is drawn toward the cell. Lighter, shifty wind ahead of it |
-| Gust front | The downdraft hits the sea and the wind rises, smoothly and without jumping |
-| Mature | Full outflow |
+| Gust front | The downdraft hits the sea and the wind rises, smoothly and without jumping. The inflow band forms ahead of the cloud |
+| Mature | Full outflow, with the inflow band holding just ahead of the leading edge |
 | Decaying | The outflow fades |
 | Cold pool | The cell is gone but leaves a patch of lighter air that slowly recovers |
 
@@ -56,7 +69,7 @@ You can learn to read a squall from the chart and from your own instruments. Her
 | Stage | On the chart | On your instruments | What to do |
 |---|---|---|---|
 | **Growing** | A small, pale outline that gets bigger | Wind eases and shifts toward the cell as it draws air in | Plenty of time. Decide whether to go around it |
-| **Gust front** | The outline darkens and its leading edge sharpens | The wind rises quickly, but smoothly | This is the moment to be on the right side of it |
+| **Gust front** | The outline darkens and its leading edge sharpens | A lull and a pull toward the cell, then the wind rises quickly but smoothly | This is the moment to be on the right side of it |
 | **Mature** | A dark, solid cell with its contours at their widest | Strongest wind ahead and to the sides, lightest behind | Stay ahead or to the side, avoid the back |
 | **Decaying** | The outline turns dashed and ragged | The outflow fades and the gusts settle | The cell is losing its punch, so passing through it costs less |
 | **Cold pool** | A faint tint where the cell was | Lighter wind that slowly recovers | Avoid parking in it. Sail out toward the stronger breeze |
@@ -65,7 +78,9 @@ A good way to learn is to pick one cell and follow it from start to finish with 
 
 ### Where a squall goes
 
-A squall is carried along by the surface wind, but not exactly with it. Its track is turned **30° off the wind direction**: to the **right** in the northern hemisphere and to the **left** in the southern. So in a steady trade from the east, a cell in the north Atlantic heads a bit **north** of west, not straight downwind. Cells travel at roughly the speed of the surface wind, within a limited range, so a cell in light air still creeps along and one in a strong breeze does not outrun it.
+A squall is carried along by the wind, but not exactly with it. Its track is turned **30° off the wind direction**: to the **right** in the northern hemisphere and to the **left** in the southern. So in a steady trade from the east, a cell in the north Atlantic heads a bit **north** of west, not straight downwind. Cells also travel a little **faster than the surface wind**, as real trade-wind squalls do, within a limited range. A cell in light air still creeps along, and one in a strong breeze does not run away.
+
+Because a squall is only a little faster than the wind, a quick boat sailing downwind can stay in the strong air ahead of the cloud for a long time. A slower boat gets one pass, so how you leave the squall matters.
 
 This helps you predict where it will be in the next hour. Look at the wind arrows, add the 30° turn, and you have its likely path. That is how you decide which side to pass.
 
