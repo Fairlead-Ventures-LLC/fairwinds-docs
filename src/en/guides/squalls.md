@@ -6,6 +6,10 @@ title: Squalls
 
 # Squalls
 
+![FB_IMG_1793827899029](/images/FB_IMG_1793827899029.jpg)
+
+-- Credit: Guido Cantini stares down a squall in the GGR (Facebook post)
+
 <p class="lead">Squalls are small, fast-moving cells of rain and gusty wind that sit on top of the forecast wind. The forecast is smooth; real trade-wind sailing is not. FairWinds adds squalls as individual cells that change the wind your boat actually feels, so you can see one coming, steer around it, or choose your moment to go through.</p>
 
 Squalls are enabled per race by the race creator. If your race has them, you'll see them on the chart and in your wind readout.
@@ -49,6 +53,12 @@ A cell with no track has no leading side, so it has no inflow band.
 ---
 
 ## Life cycle
+
+
+
+![squall-examples](/images/squall-examples.png)
+
+![active-squall](/images/active-squall.png)
 
 Every squall passes through the same stages:
 
